@@ -1,13 +1,13 @@
 """
-Example usage of sotarl package.
-TODO Adjust accordingly after sotarl is implemented.
+Example usage of rldb package.
+TODO Adjust accordingly after rldb is implemented.
 """
-import sotarl
+import rldb
 
 
 nicknames = ['dqn2015', 'doubledqn', 'per', 'duelingdqn', 'noisydqn', 'c51', 'rainbowdqn']
-papers = sotarl.get_papers_from_nicknames(nicknames)
-primary_algos = sotarl.get_primary_algos_from_papers(papers)
+papers = rldb.get_papers_from_nicknames(nicknames)
+primary_algos = rldb.get_primary_algos_from_papers(papers)
 scores = [algo['breakout']['score'] for algo in primary_algos]
 
 for nickname, score in zip(nickname, score):
