@@ -3,8 +3,9 @@ Database of state-of-the-art RL algorithms
 
 ## Examples
 
-![Atari Breakout Scores](/docs/atari-breakout.png)
-![Atari Montezuma's Revenge Scores](/docs/atari-montezuma-revenge.png)
+| Atari Breakout Scores                              | Atari Montezuma's Revenge Scores                                       |
+|:--------------------------------------------------:|:----------------------------------------------------------------------:|
+| ![Atari Breakout Scores](/docs/atari-breakout.png) | ![Atari Montezuma's Revenge Scores](/docs/atari-montezuma-revenge.png) |
 
 ## Papers
 
