@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import rldb
 
 
-ENV_TITLE = 'atari-breakout'
+ENV_TITLE = 'atari-montezuma-revenge'
 
 # Get relevant entries
 entries = rldb.get_all_entries()
@@ -20,7 +20,7 @@ breakout_entries = sorted(
 labels = [entry['algo-nickname'] for entry in breakout_entries]
 scores = [entry['score'] for entry in breakout_entries]
 plt.barh(labels, scores)
-plt.title('Atari Breakout Scores')
+plt.title('Atari Montezuma\'s Revenge Scores')
 plt.tight_layout()
-plt.savefig('atari-breakout.png')
+plt.savefig('atari-montezuma-revenge.png')
 plt.show()
