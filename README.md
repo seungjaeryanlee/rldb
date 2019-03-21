@@ -16,5 +16,6 @@ Database of state-of-the-art RL algorithms
 - [x] [Exploration by Random Network Distillation (Burda et al., 2018)](https://arxiv.org/abs/1810.12894)
 - [x] [Playing Atari with Deep Reinforcement Learning (Mnih et al., 2013)](https://arxiv.org/abs/1312.5602)
 - [x] [Deep Recurrent Q-Learning for Partially Observable MDPs (Hausknecht and Stone, 2015)](https://arxiv.org/abs/1507.06527)
+- [x] [Dueling Network Architectures for Deep Reinforcement Learning (Wang et al., 2015)](https://arxiv.org/abs/1511.06581)
 
 ### To Be Added
