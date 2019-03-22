@@ -18,5 +18,6 @@ Database of state-of-the-art RL algorithms
 - [x] [Deep Recurrent Q-Learning for Partially Observable MDPs (Hausknecht and Stone, 2015)](https://arxiv.org/abs/1507.06527)
 - [x] [Dueling Network Architectures for Deep Reinforcement Learning (Wang et al., 2015)](https://arxiv.org/abs/1511.06581)
 - [x] [Deep Reinforcement Learning with Double Q-learning (Hasselt et al., 2015)](https://arxiv.org/abs/1509.06461)
+- [x] [Prioritized Experience Replay (Schaul et al., 2015)](https://arxiv.org/abs/1511.05952)
 
 ### To Be Added
