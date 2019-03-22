@@ -6,6 +6,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Trust Region Policy Optimization - vine",
     "algo-nickname": "TRPO - vine",
+    "algo-source-title": "Trust Region Policy Optimization",
 
     # HYPERPARAMETERS
     # Not specified

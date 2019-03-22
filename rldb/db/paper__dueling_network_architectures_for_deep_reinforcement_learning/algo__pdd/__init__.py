@@ -6,6 +6,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Prioritized Dueling Double Deep Q-Network",
     "algo-nickname": "PDD DQN",
+    "algo-source-title": "Dueling Network Architectures for Deep Reinforcement Learning",
 
     # HYPERPARAMETERS
     # Not specified

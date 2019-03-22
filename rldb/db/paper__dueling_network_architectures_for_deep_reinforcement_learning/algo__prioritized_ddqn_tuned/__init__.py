@@ -4,8 +4,9 @@ from .entries import entries
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Double Deep Q-Network",
-    "algo-nickname": "DDQN",
+    "algo-title": "Prioritized Double Deep Q-Network (tuned)",
+    "algo-nickname": "Prioritized DDQN (tuned)",
+    "algo-source-title": "Prioritized Experience Replay",
 
     # HYPERPARAMETERS
     # Not specified

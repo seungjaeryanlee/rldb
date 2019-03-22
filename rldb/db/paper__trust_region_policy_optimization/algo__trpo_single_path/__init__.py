@@ -6,6 +6,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Trust Region Policy Optimization - single path",
     "algo-nickname": "TRPO - single path",
+    "algo-source-title": "Trust Region Policy Optimization",
 
     # HYPERPARAMETERS
     # Not specified

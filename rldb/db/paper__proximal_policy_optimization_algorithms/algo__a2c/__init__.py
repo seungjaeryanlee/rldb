@@ -6,6 +6,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Advantage Actor Critic",
     "algo-nickname": "A2C",
+    # A2C has no paper
 
     # HYPERPARAMETERS
     "algo-frames": 40000000,

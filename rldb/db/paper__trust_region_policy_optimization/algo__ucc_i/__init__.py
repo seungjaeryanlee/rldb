@@ -6,6 +6,7 @@ algo = {
     # ALGORITHM
     "algo-title": "UCT to Classification-Interleaved",
     "algo-nickname": "UCC-I",
+    "algo-source-title": "Deep Learning for Real-Time Atari Game Play Using Offline Monte-Carlo Tree Search Planning",
 
     # HYPERPARAMETERS
     # Not specified

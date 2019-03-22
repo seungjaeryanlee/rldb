@@ -6,6 +6,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Deep Recurrent Q-Network",
     "algo-nickname": "DRQN",
+    "algo-source-title": "Deep Recurrent Q-Learning for Partially Observable MDPs",
 
     # HYPERPARAMETERS
     "algo-frames": 0,  # TODO Unsure

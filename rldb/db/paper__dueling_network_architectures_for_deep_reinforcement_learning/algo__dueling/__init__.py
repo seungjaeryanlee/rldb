@@ -6,6 +6,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Dueling Deep Q-Network",
     "algo-nickname": "Dueling DQN",
+    "algo-source-title": "Dueling Network Architectures for Deep Reinforcement Learning",
 
     # HYPERPARAMETERS
     # Not specified

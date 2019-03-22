@@ -6,6 +6,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Random Network Distillation",
     "algo-nickname": "RND",
+    "algo-source-title": "Exploration by Random Network Distillation",
 
     # HYPERPARAMETERS
     # Not specified

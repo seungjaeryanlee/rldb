@@ -6,6 +6,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Proximal Policy Optimization",
     "algo-nickname": "PPO",
+    "algo-source-title": "Proximal Policy Optimization Algorithm",
 
     # HYPERPARAMETERS
     "algo-frames": 40000000,

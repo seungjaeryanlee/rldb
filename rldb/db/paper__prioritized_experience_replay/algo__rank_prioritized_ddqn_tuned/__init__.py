@@ -6,6 +6,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Prioritized Double Deep Q-Network (rank, tuned)",
     "algo-nickname": "Prioritized DDQN (rank, tuned)",
+    "algo-source-title": "Prioritized Experience Replay",
 
     # HYPERPARAMETERS
     # Not specified
