@@ -4,9 +4,7 @@ import rldb
 
 
 def env_barplot(env_title, plot_title):
-    # Get relevant entries
-    entries = rldb.get_all_entries()
-    entries = [e for e in entries if e['env-title'] == env_title]
+    entries = rldb.find_all({ 'env-title': env_title })
 
     # Dedupe and sort entries by score, increasing
     sorted_entries = sorted(

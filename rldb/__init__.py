@@ -1,4 +1,4 @@
-from .get import get_all_entries
+from .find import find_one, find_all
 
 
-__all__ = ["get_all_entries"]
+__all__ = ["find_one", "find_all"]
