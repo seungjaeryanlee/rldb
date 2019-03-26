@@ -1,4 +1,3 @@
-from .algo__dqn2015 import entries as dqn2015_entries
 from .algo__dqn2015_ours import entries as dqn2015_ours_entries
 from .algo__drqn import entries as drqn_entries
 
@@ -38,10 +37,9 @@ source = {
 # Populate entries
 entries = (
     []
-    + dqn2015_entries
     + dqn2015_ours_entries
     + drqn_entries
 )
 entries = [{**entry, **source} for entry in entries]
 
-assert len(entries) == 9 * 3
+assert len(entries) == 9 * 2

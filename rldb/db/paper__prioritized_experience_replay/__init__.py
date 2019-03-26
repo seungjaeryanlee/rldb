@@ -1,5 +1,3 @@
-from .algo__ddqn import entries as ddqn_entries
-from .algo__dqn2015 import entries as dqn2015_entries
 from .algo__gorila import entries as gorila_entries
 from .algo__human import entries as human_entries
 from .algo__prop_prioritized_ddqn_tuned import entries as prop_pddqn_tuned_entries
@@ -47,8 +45,6 @@ source = {
 # Populate entries
 entries = (
     []
-    + ddqn_entries
-    + dqn2015_entries
     + gorila_entries
     + human_entries
     + prop_pddqn_tuned_entries
@@ -59,4 +55,4 @@ entries = (
 entries = [{**entry, **source} for entry in entries]
 
 # Gorila and DQN2015 are tested only on 49 envs
-assert len(entries) == 57 * 6 + 49 * 2  # 57/49 games, 6/2 algorithms
+assert len(entries) == 57 * 5 + 49 * 1  # 57/49 games, 5/1 algorithms

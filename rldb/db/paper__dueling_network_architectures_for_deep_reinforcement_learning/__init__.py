@@ -1,9 +1,6 @@
-from .algo__ddqn_tuned import entries as ddqn_tuned_entries
-from .algo__dqn2015 import entries as dqn2015_entries
 from .algo__dueling import entries as dueling_entries
 from .algo__human import entries as human_entries
 from .algo__pdd import entries as pdd_entries
-from .algo__prioritized_ddqn_tuned import entries as prioritized_ddqn_tuned_entries
 from .algo__random import entries as random_entries
 
 
@@ -48,15 +45,12 @@ source = {
 # Populate entries
 entries = (
     []
-    + ddqn_tuned_entries
-    + dqn2015_entries
     + dueling_entries
     + human_entries
     + pdd_entries
-    + prioritized_ddqn_tuned_entries
     + random_entries
 )
 entries = [{**entry, **source} for entry in entries]
 
-assert len(entries) == 57 * 2 * 7  # 57 games, 2 variants, 7 algorithms
+assert len(entries) == 57 * 2 * 4  # 57 games, 2 variants, 4 algorithms
 

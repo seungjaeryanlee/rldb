@@ -1,6 +1,5 @@
 from .algo__random import entries as random_entries
 from .algo__human import entries as human_entries
-from .algo__dqn2015 import entries as dqn2015_entries
 from .algo__ddqn import entries as ddqn_entries
 from .algo__ddqn_tuned import entries as ddqn_tuned_entries
 
@@ -44,7 +43,6 @@ entries = (
     []
     + random_entries
     + human_entries
-    + dqn2015_entries
     + ddqn_entries
     + ddqn_tuned_entries
 )
@@ -54,7 +52,6 @@ assert len(entries) == (
     0
     + 57 + 49
     + 57 + 49
-    + 49 + 49
     + 57 + 49
     + 57
 )

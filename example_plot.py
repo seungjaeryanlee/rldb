@@ -22,6 +22,7 @@ def env_barplot(env_title, plot_title):
     plt.tight_layout()
     plt.savefig('docs/{}.png'.format(env_title))
     plt.show()
+    plt.clf()
 
 
 def remove_duplicates(entries):

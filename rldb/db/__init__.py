@@ -21,12 +21,12 @@ entries = (
 
 assert len(entries) == (
     0
-    + 27   # DRQN
-    + 473  # DDQN
-    + 798  # Dueling DQN
+    + 18   # DRQN
+    + 375  # DDQN
+    + 456  # Dueling DQN
     + 18   # RND
     + 56   # DQN2013
-    + 440  # PER
+    + 334  # PER
     + 147  # PPO
-    + 42   # TRPO
+    + 35   # TRPO
 )
