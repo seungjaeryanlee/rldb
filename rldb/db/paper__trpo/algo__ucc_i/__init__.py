@@ -1,3 +1,11 @@
+"""
+UCC-I scores from TRPO paper.
+
+ 7 entries
+------------------------------------------------------------------------
+ 7 unique entries
+
+"""
 from .entries import entries
 
 

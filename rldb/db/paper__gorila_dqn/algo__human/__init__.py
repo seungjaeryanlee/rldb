@@ -1,3 +1,12 @@
+"""
+Human scores from Gorila DQN paper.
+
+   98 entries
+ - 49 no-op entries from DQN paper
+------------------------------------------------------------------------
+   98 unique entries
+
+"""
 from .entries import entries
 
 
@@ -15,4 +24,4 @@ algo = {
 # Populate entries
 entries = [{**entry, **algo} for entry in entries]
 
-assert len(entries) == 49 + 49  # 49 human, 49 noop
+assert len(entries) == 49

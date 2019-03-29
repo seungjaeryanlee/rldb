@@ -1,6 +1,6 @@
 from .algo__contingency import entries as contingency_entries
-from .algo__dqn import entries as dqn_entries
-from .algo__dqn_best import entries as dqn_best_entries
+from .algo__dqn2013 import entries as dqn2013_entries
+from .algo__dqn2013_best import entries as dqn2013_best_entries
 from .algo__hneat_best import entries as hneat_best_entries
 from .algo__hneat_pixel import entries as hneat_pixel_entries
 from .algo__human import entries as human_entries
@@ -54,8 +54,8 @@ source = {
 entries = (
     []
     + contingency_entries
-    + dqn_entries
-    + dqn_best_entries
+    + dqn2013_entries
+    + dqn2013_best_entries
     + hneat_best_entries
     + hneat_pixel_entries
     + human_entries

@@ -1,18 +1,25 @@
+"""
+Random scores from DDQN paper.
+
+  106 entries
+ - 49 no-op entries from DQN
+ - 49 human entries from Gorila DQN
+------------------------------------------------------------------------
+    8 unique entries
+
+"""
 from .entries import entries
 
 
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Random",
-    "algo-nickname": "Random",
-
-    # HYPERPARAMETERS
-    # Not specified
-    "algo-frames": 0,
+    "algo-title": "Random (from DDQN)",
+    "algo-nickname": "Random (from DDQN)",
 }
 
 # Populate entries
 entries = [{**entry, **algo} for entry in entries]
 
-assert len(entries) == 57 + 49  # 57 human, 49 noop
+
+assert len(entries) == 8

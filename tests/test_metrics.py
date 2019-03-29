@@ -23,11 +23,24 @@ def test_algo_count():
     all_entries = rldb.find_all({})
     all_algos = set([e['algo-title'] for e in all_entries])
 
-    assert len(all_algos) == 33
+    assert len(all_algos) == 37
 
 
 def test_entries_count():
     """Verify number of entries in rldb. This number should match README."""
     all_entries = rldb.find_all({})
 
-    assert len(all_entries) == 1929
+    assert len(all_entries) == 1421
+    assert len(all_entries) == (
+        0
+        + 179  # DDQN
+        + 245  # DQN
+        + 56   # DQN2013
+        + 38   # DRQN
+        + 301  # DuDQN
+        + 245  # Gorila DQN
+        + 147  # PPO
+        + 171  # Prioritized DQN
+        + 18   # RND
+        + 21   # TRPO
+    )

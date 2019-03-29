@@ -1,3 +1,11 @@
+"""
+Prioritized DQN (rank) scores from Prioritized DQN paper.
+
+   57 entries
+------------------------------------------------------------------------
+   57 unique entries
+
+"""
 from .entries import entries
 
 

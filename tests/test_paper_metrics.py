@@ -8,7 +8,13 @@ def test_ddqn_paper_count():
         'source-title': 'Deep Reinforcement Learning with Double Q-learning',
     })
 
-    assert len(ddqn_entries) == 57 * 4 + 49 * 2
+    assert len(ddqn_entries) == (
+        0
+        + 57 + 49  # DDQN 
+        + 57       # DDQN (tuned)
+        + 8        # Human
+        + 8        # Random
+    )
 
 
 def test_dqn2013_paper_count():
@@ -17,25 +23,46 @@ def test_dqn2013_paper_count():
         'source-title': 'Playing Atari with Deep Reinforcement Learning',
     })
 
-    assert len(dqn2013_entries) == 8 * 7
+    assert len(dqn2013_entries) == (
+        0
+        + 7  # Contingency
+        + 7  # DQN2013
+        + 7  # DQN2013 Best
+        + 7  # HNeat Best
+        + 7  # HNeat Pixel
+        + 7  # Human
+        + 7  # Random
+        + 7  # SARSA
+    )
 
 
-def test_dqn2015_paper_count():
-    """Verify number of entries in DQN2015 paper."""
-    dqn2015_entries = rldb.find_all({
+def test_dqn_paper_count():
+    """Verify number of entries in DQN paper."""
+    dqn_entries = rldb.find_all({
         'source-title': 'Human-level Control through Deep Reinforcement Learning',
     })
 
-    assert len(dqn2015_entries) == 49 * 5
+    assert len(dqn_entries) == (
+        0
+        + 49  # Best Linear Learner
+        + 49  # Contingency
+        + 49  # DQN
+        + 49  # Human
+        + 49  # Random
+    )
 
 
 def test_drqn_paper_count():
     """Verify number of entries in DRQN paper."""
-    dqn2013_entries = rldb.find_all({
+    drqn_entries = rldb.find_all({
         'source-title': 'Deep Recurrent Q-Learning for Partially Observable MDPs',
     })
 
-    assert len(dqn2013_entries) == 9 * 2
+    assert len(drqn_entries) == (
+        0
+        + 19  # DQN (Ours)
+        + 19  # DRQN
+    )
 
 
 def test_dueling_dqn_paper_count():
@@ -44,7 +71,13 @@ def test_dueling_dqn_paper_count():
         'source-title': 'Dueling Network Architectures for Deep Reinforcement Learning',
     })
 
-    assert len(dqn2013_entries) == 57 * 2 * 4 - 49
+    assert len(dqn2013_entries) == (
+        0
+        + 114  # Dueling DQN
+        + 65   # Human
+        + 114  # PDD DQN
+        + 8    # Random
+    )
 
 
 def test_gorila_dqn_paper_count():
@@ -53,7 +86,13 @@ def test_gorila_dqn_paper_count():
         'source-title': 'Massively Parallel Methods for Deep Reinforcement Learning',
     })
 
-    assert len(gorila_dqn_entries) == 49 * 7
+    assert len(gorila_dqn_entries) == (
+        0
+        + 49  # DQN
+        + 98  # Gorila DQN
+        + 49  # Human
+        + 49  # Random
+    )
 
 
 def test_ppo_paper_count():
@@ -62,7 +101,12 @@ def test_ppo_paper_count():
         'source-title': 'Proximal Policy Optimization Algorithm',
     })
 
-    assert len(dqn2013_entries) == 49 * 3
+    assert len(dqn2013_entries) == (
+        0
+        + 49  # A2C
+        + 49  # ACER
+        + 49  # PPO
+    )
 
 
 def test_prioritized_dqn_paper_count():
@@ -71,7 +115,12 @@ def test_prioritized_dqn_paper_count():
         'source-title': 'Prioritized Experience Replay',
     })
 
-    assert len(dqn2013_entries) == 57 * 5 + 49 * 1
+    assert len(dqn2013_entries) == (
+        0
+        + 57  # Proportional Prioritized DDQN
+        + 57  # Rank Prioritized DQN
+        + 57  # Rank Prioritized DDQN
+    )
 
 
 def test_rnd_paper_count():
@@ -80,7 +129,12 @@ def test_rnd_paper_count():
         'source-title': 'Exploration by Random Network Distillation',
     })
 
-    assert len(dqn2013_entries) == 6 * 3
+    assert len(dqn2013_entries) == (
+        0
+        + 6  # Dynamics
+        + 6  # PPO
+        + 6  # RND
+    )
 
 
 def test_trpo_paper_count():
@@ -89,4 +143,9 @@ def test_trpo_paper_count():
         'source-title': 'Trust Region Policy Optimization',
     })
 
-    assert len(dqn2013_entries) == 7 * 5
+    assert len(dqn2013_entries) == (
+        0
+        + 7  # TRPO (single path)
+        + 7  # TRPO (vine)
+        + 7  # UCC-I
+    )

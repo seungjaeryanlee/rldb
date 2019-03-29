@@ -1,3 +1,13 @@
+"""
+Human scores from DDQN paper.
+
+  106 entries
+ - 49 no-op entries from DQN
+ - 49 human entries from Gorila DQN
+------------------------------------------------------------------------
+    8 unique entries
+
+"""
 from .entries import entries
 
 
@@ -6,13 +16,9 @@ algo = {
     # ALGORITHM
     "algo-title": "Human (from DDQN)",
     "algo-nickname": "Human (from DDQN)",
-
-    # HYPERPARAMETERS
-    # Not specified
-    "algo-frames": 0,
 }
 
 # Populate entries
 entries = [{**entry, **algo} for entry in entries]
 
-assert len(entries) == 57 + 49  # 57 human, 49 noop
+assert len(entries) == 8

@@ -1,3 +1,12 @@
+"""
+DRQN scores from DRQN paper.
+
+    9 entries
+ + 10 flickering entries
+------------------------------------------------------------------------
+   19 unique entries
+
+"""
 from .entries import entries
 
 
@@ -15,4 +24,4 @@ algo = {
 # Populate entries
 entries = [{**entry, **algo} for entry in entries]
 
-assert len(entries) == 9
+assert len(entries) == 9 + 10

@@ -1,6 +1,6 @@
 from .algo__random import entries as random_entries
 from .algo__human import entries as human_entries
-from .algo__dqn2015 import entries as dqn2015_entries
+from .algo__dqn import entries as dqn_entries
 from .algo__gorila_dqn import entries as gorila_dqn_entries
 
 
@@ -65,7 +65,7 @@ entries = (
     []
     + random_entries
     + human_entries
-    + dqn2015_entries
+    + dqn_entries
     + gorila_dqn_entries
 )
 entries = [{**entry, **source} for entry in entries]

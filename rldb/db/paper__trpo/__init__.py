@@ -1,5 +1,3 @@
-from .algo__random import entries as random_entries
-from .algo__human import entries as human_entries
 from .algo__ucc_i import entries as ucc_i_entries
 from .algo__trpo_single_path import entries as trpo_single_path_entries
 from .algo__trpo_vine import entries as trpo_vine_entries
@@ -45,8 +43,7 @@ source = {
 
 # Populate entries
 entries = (
-      random_entries
-    + human_entries
+    []
     + ucc_i_entries
     + trpo_single_path_entries
     + trpo_vine_entries

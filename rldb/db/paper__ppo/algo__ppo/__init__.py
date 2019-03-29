@@ -1,3 +1,11 @@
+"""
+PPO scores from PPO paper.
+
+   49 entries
+------------------------------------------------------------------------
+   49 unique entries
+
+"""
 from .entries import entries
 
 

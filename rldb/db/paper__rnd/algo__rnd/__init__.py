@@ -1,3 +1,11 @@
+"""
+RND scores from RND paper.
+
+ 6 entries
+------------------------------------------------------------------------
+ 6 unique entries
+
+"""
 from .entries import entries
 
 
