@@ -2,6 +2,8 @@
 
 # rldb
 
+[![Build Status](https://travis-ci.com/seungjaeryanlee/rldb.svg?branch=master)](https://travis-ci.com/seungjaeryanlee/rldb)
+
 ![Environments tracked in rldb](https://img.shields.io/badge/environments-57-blue.svg)
 ![Papers tracked in rldb](https://img.shields.io/badge/papers-8-blue.svg)
 ![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-28-blue.svg)

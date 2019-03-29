@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install pytest --quiet
+script:
+  - python -m pytest
+cache: pip
