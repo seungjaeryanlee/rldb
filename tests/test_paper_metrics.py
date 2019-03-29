@@ -2,6 +2,20 @@
 import rldb
 
 
+def test_a3c_paper_count():
+    """Verify number of entries in A3C paper."""
+    a3c_entries = rldb.find_all({
+        'source-title': 'Asynchronous Methods for Deep Reinforcement Learning',
+    })
+
+    assert len(a3c_entries) == (
+        0
+        + 57  # A3C FF 1 day
+        + 57  # A3C FF
+        + 57  # A3C LSTM
+    )
+
+
 def test_ddqn_paper_count():
     """Verify number of entries in DDQN paper."""
     ddqn_entries = rldb.find_all({
