@@ -16,6 +16,20 @@ def test_a3c_paper_count():
     )
 
 
+def test_c51_paper_count():
+    """Verify number of entries in A3C paper."""
+    a3c_entries = rldb.find_all({
+        'source-title': 'A Distributional Perspective on Reinforcement Learning',
+    })
+
+    assert len(a3c_entries) == (
+        0
+        + 57  # DQN
+        + 57  # DDQN
+        + 57  # C51
+    )
+
+
 def test_ddqn_paper_count():
     """Verify number of entries in DDQN paper."""
     ddqn_entries = rldb.find_all({
@@ -24,7 +38,7 @@ def test_ddqn_paper_count():
 
     assert len(ddqn_entries) == (
         0
-        + 57 + 49  # DDQN 
+        + 57 + 49  # DDQN
         + 57       # DDQN (tuned)
         + 8        # Human
         + 8        # Random

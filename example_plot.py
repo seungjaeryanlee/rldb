@@ -17,11 +17,12 @@ def env_barplot(env_title, plot_title):
     # Draw bar plot
     labels = ['{} ({})'.format(entry['algo-nickname'], entry['env-variant']) if 'env-variant' in entry else entry['algo-nickname'] for entry in deduped_entries]
     scores = [entry['score'] for entry in deduped_entries]
+    plt.figure(figsize=(12, 8))
     plt.barh(labels, scores)
     plt.title(plot_title)
     plt.tight_layout()
     plt.savefig('docs/{}.png'.format(env_title))
-    plt.show()
+    # plt.show()
     plt.clf()
 
 
