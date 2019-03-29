@@ -123,6 +123,25 @@ def test_gorila_dqn_paper_count():
     )
 
 
+def test_noisynet_paper_count():
+    """Verify number of entries in NoisyNet paper."""
+    noisynet_entries = rldb.find_all({
+        'source-title': 'Noisy Networks for Exploration',
+    })
+
+    assert len(noisynet_entries) == (
+        0
+        + 57  # A3C
+        + 57  # DQN
+        + 57  # DuDQN
+        + 57  # Human
+        + 57  # NoisyNet A3C
+        + 57  # NoisyNet DQN
+        + 57  # NoisyNet DuDQN
+        + 57  # Random
+    )
+
+
 def test_ppo_paper_count():
     """Verify number of entries in PPO paper."""
     dqn2013_entries = rldb.find_all({
