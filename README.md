@@ -1,3 +1,5 @@
+<img src="docs/rldb.png" align="right" width="20%"/>
+
 # rldb
 Database of state-of-the-art RL algorithms
 
