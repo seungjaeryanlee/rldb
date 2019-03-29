@@ -1,3 +1,4 @@
+# TODO Gorila DQN has more significant fitures
 entries = [
     {
         'env-title': 'atari-alien',

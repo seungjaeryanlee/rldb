@@ -47,6 +47,15 @@ def test_dueling_dqn_paper_count():
     assert len(dqn2013_entries) == 57 * 2 * 4 - 49
 
 
+def test_gorila_dqn_paper_count():
+    """Verify number of entries in Gorila DQN paper."""
+    gorila_dqn_entries = rldb.find_all({
+        'source-title': 'Massively Parallel Methods for Deep Reinforcement Learning',
+    })
+
+    assert len(gorila_dqn_entries) == 49 * 7
+
+
 def test_ppo_paper_count():
     """Verify number of entries in PPO paper."""
     dqn2013_entries = rldb.find_all({
