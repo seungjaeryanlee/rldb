@@ -4,15 +4,14 @@ from .entries import entries
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Random",
-    "algo-nickname": "Random",
+    "algo-title": "Human",
+    "algo-nickname": "Human",
 
     # HYPERPARAMETERS
-    # Not specified
-    "algo-frames": 0,
+    "algo-frames": 0,  # TODO Unsure
 }
 
 # Populate entries
 entries = [{**entry, **algo} for entry in entries]
 
-assert len(entries) == 57 + 8
+assert len(entries) == 49

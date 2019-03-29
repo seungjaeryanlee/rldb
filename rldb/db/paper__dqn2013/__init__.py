@@ -12,7 +12,7 @@ from .algo__sarsa import entries as sarsa_entries
 source = {
     #  BASICS
     "source-title": "Playing Atari with Deep Reinforcement Learning",
-    "source-nickname": "DQN",
+    "source-nickname": "DQN2013",
     "source-authors": [
         "Volodymyr Mnih",
         "Koray Kavukcuoglu",

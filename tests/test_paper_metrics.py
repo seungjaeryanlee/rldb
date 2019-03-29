@@ -8,7 +8,7 @@ def test_ddqn_paper_count():
         'source-title': 'Deep Reinforcement Learning with Double Q-learning',
     })
 
-    assert len(ddqn_entries) == 57 * 4 + 49 * 3
+    assert len(ddqn_entries) == 57 * 4 + 49 * 2
 
 
 def test_dqn2013_paper_count():
@@ -18,6 +18,15 @@ def test_dqn2013_paper_count():
     })
 
     assert len(dqn2013_entries) == 8 * 7
+
+
+def test_dqn2015_paper_count():
+    """Verify number of entries in DQN2015 paper."""
+    dqn2015_entries = rldb.find_all({
+        'source-title': 'Human-level Control through Deep Reinforcement Learning',
+    })
+
+    assert len(dqn2015_entries) == 49 * 5
 
 
 def test_drqn_paper_count():
@@ -35,7 +44,7 @@ def test_dueling_dqn_paper_count():
         'source-title': 'Dueling Network Architectures for Deep Reinforcement Learning',
     })
 
-    assert len(dqn2013_entries) == 57 * 2 * 4
+    assert len(dqn2013_entries) == 57 * 2 * 4 - 49
 
 
 def test_ppo_paper_count():

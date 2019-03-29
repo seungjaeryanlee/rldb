@@ -16,4 +16,4 @@ algo = {
 # Populate entries
 entries = [{**entry, **algo} for entry in entries]
 
-assert len(entries) == 57 + 49  # 57 human, 49 noop
+assert len(entries) == 57
