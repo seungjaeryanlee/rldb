@@ -3,8 +3,8 @@
 # rldb
 
 ![Environments tracked in rldb](https://img.shields.io/badge/environments-57-blue.svg)
-![Papers tracked in rldb](https://img.shields.io/badge/papers-9-blue.svg)
-![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-25-blue.svg)
+![Papers tracked in rldb](https://img.shields.io/badge/papers-8-blue.svg)
+![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-28-blue.svg)
 ![Entries tracked in rldb](https://img.shields.io/badge/entries-1439-blue.svg)
 
 Database of state-of-the-art RL algorithms

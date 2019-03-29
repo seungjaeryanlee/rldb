@@ -48,5 +48,3 @@ entries = (
 )
 
 entries = [{**entry, **source} for entry in entries]
-
-assert len(entries) == 6 * 3

@@ -41,5 +41,3 @@ entries = (
     + drqn_entries
 )
 entries = [{**entry, **source} for entry in entries]
-
-assert len(entries) == 9 * 2

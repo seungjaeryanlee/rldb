@@ -47,11 +47,3 @@ entries = (
     + ddqn_tuned_entries
 )
 entries = [{**entry, **source} for entry in entries]
-
-assert len(entries) == (
-    0
-    + 57 + 49
-    + 57 + 49
-    + 57 + 49
-    + 57
-)

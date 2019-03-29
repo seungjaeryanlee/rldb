@@ -63,5 +63,3 @@ entries = (
     + sarsa_entries
 )
 entries = [{**entry, **source} for entry in entries]
-
-assert len(entries) == 8 * 7

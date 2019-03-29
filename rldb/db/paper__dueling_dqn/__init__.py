@@ -51,6 +51,3 @@ entries = (
     + random_entries
 )
 entries = [{**entry, **source} for entry in entries]
-
-assert len(entries) == 57 * 2 * 4  # 57 games, 2 variants, 4 algorithms
-

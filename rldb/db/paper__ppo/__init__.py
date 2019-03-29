@@ -44,5 +44,3 @@ source = {
 # Populate entries
 entries = a2c_entries + acer_entries + ppo_entries
 entries = [{**entry, **source} for entry in entries]
-
-assert len(entries) == 49 * 3

@@ -18,15 +18,3 @@ entries = (
     + ppo_entries
     + trpo_entries
 )
-
-assert len(entries) == (
-    0
-    + 18   # DRQN
-    + 375  # DDQN
-    + 456  # Dueling DQN
-    + 18   # RND
-    + 56   # DQN2013
-    + 334  # PER
-    + 147  # PPO
-    + 35   # TRPO
-)
