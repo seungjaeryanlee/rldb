@@ -15,7 +15,7 @@ def test_paper_count():
     all_entries = rldb.find_all({})
     all_papers = set([e['source-title'] for e in all_entries])
 
-    assert len(all_papers) == 13
+    assert len(all_papers) == 14
 
 
 def test_algo_count():
@@ -23,14 +23,14 @@ def test_algo_count():
     all_entries = rldb.find_all({})
     all_algos = set([e['algo-title'] for e in all_entries])
 
-    assert len(all_algos) == 51
+    assert len(all_algos) == 54
 
 
 def test_entries_count():
     """Verify number of entries in rldb. This number should match README."""
     all_entries = rldb.find_all({})
 
-    assert len(all_entries) == 2219
+    assert len(all_entries) == 2451
     assert len(all_entries) == (
         0
         + 171  # A3C
@@ -44,6 +44,7 @@ def test_entries_count():
         + 456  # NoisyNet
         + 147  # PPO
         + 171  # Prioritized DQN
+        + 232  # Rainbow
         + 18   # RND
         + 21   # TRPO
     )

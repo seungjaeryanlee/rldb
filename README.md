@@ -5,9 +5,9 @@
 [![Build Status](https://travis-ci.com/seungjaeryanlee/rldb.svg?branch=master)](https://travis-ci.com/seungjaeryanlee/rldb)
 
 ![Environments tracked in rldb](https://img.shields.io/badge/environments-57-blue.svg)
-![Papers tracked in rldb](https://img.shields.io/badge/papers-13-blue.svg)
-![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-51-blue.svg)
-![Entries tracked in rldb](https://img.shields.io/badge/entries-2219-blue.svg)
+![Papers tracked in rldb](https://img.shields.io/badge/papers-14-blue.svg)
+![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-54-blue.svg)
+![Entries tracked in rldb](https://img.shields.io/badge/entries-2451-blue.svg)
 
 Database of state-of-the-art RL algorithms
 
@@ -32,6 +32,7 @@ Database of state-of-the-art RL algorithms
 - [x] [Dueling Network Architectures for Deep Reinforcement Learning (Wang et al., 2015)](https://arxiv.org/abs/1511.06581)
 - [x] [Noisy Networks for Exploration (Fortunato et al., 2017)](https://arxiv.org/abs/1706.10295)
 - [x] [A Distributional Perspective on Reinforcement Learning (Bellemare et al., 2017)](https://arxiv.org/abs/1707.06887)
+- [x] [Rainbow: Combining Improvements in Deep Reinforcement Learning (Hessel et al., 2017)](https://arxiv.org/abs/1710.02298)
 
 #### Policy Gradients
 

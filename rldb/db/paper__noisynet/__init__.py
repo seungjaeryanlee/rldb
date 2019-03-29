@@ -33,7 +33,31 @@ source = {
     "source-arxiv-version": 2,
 
     #  MISC.
-    "source-bibtex": """""",
+    "source-bibtex": """
+@article{DBLP:journals/corr/FortunatoAPMOGM17,
+    author    = {Meire Fortunato and
+                 Mohammad Gheshlaghi Azar and
+                 Bilal Piot and
+                 Jacob Menick and
+                 Ian Osband and
+                 Alex Graves and
+                 Vlad Mnih and
+                 R{\'{e}}mi Munos and
+                 Demis Hassabis and
+                 Olivier Pietquin and
+                 Charles Blundell and
+                 Shane Legg},
+    title     = {Noisy Networks for Exploration},
+    journal   = {CoRR},
+    volume    = {abs/1706.10295},
+    year      = {2017},
+    url       = {http://arxiv.org/abs/1706.10295},
+    archivePrefix = {arXiv},
+    eprint    = {1706.10295},
+    timestamp = {Mon, 13 Aug 2018 16:46:11 +0200},
+    biburl    = {https://dblp.org/rec/bib/journals/corr/FortunatoAPMOGM17},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}""",
 }
 
 # Populate entries

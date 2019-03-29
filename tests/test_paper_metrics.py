@@ -170,6 +170,20 @@ def test_prioritized_dqn_paper_count():
     )
 
 
+def test_rainbow_paper_count():
+    """Verify number of entries in Rainbow paper."""
+    rainbow_entries = rldb.find_all({
+        'source-title': 'Rainbow: Combining Improvements in Deep Reinforcement Learning',
+    })
+
+    assert len(rainbow_entries) == (
+        0
+        + 16   # DQN
+        + 108  # Distributional DQN
+        + 108  # Rainbow
+    )
+
+
 def test_rnd_paper_count():
     """Verify number of entries in RND paper."""
     dqn2013_entries = rldb.find_all({

@@ -8,6 +8,7 @@ from .paper__dqn2013 import entries as dqn2013_entries
 from .paper__dqn import entries as dqn_entries
 from .paper__noisynet import entries as noisynet_entries
 from .paper__prioritized_dqn import entries as per_entries
+from .paper__rainbow import entries as rainbow_entries
 from .paper__gorila_dqn import entries as gorila_dqn_entries
 from .paper__ppo import entries as ppo_entries
 from .paper__trpo import entries as trpo_entries
@@ -24,6 +25,7 @@ entries = (
     + dqn_entries
     + noisynet_entries
     + per_entries
+    + rainbow_entries
     + gorila_dqn_entries
     + ppo_entries
     + trpo_entries
