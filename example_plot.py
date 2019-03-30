@@ -49,8 +49,8 @@ def remove_duplicates(entries):
 
 
 def main():
-    env_barplot('atari-breakout', 'Atari Breakout Scores')
-    env_barplot('atari-montezuma-revenge', 'Atari Montezuma\'s Revenge Scores')
+    env_barplot('atari-space-invaders', 'Atari Space Invaders Scores')
+    env_barplot('mujoco-walker2d', 'MuJoCo Walker2d Scores')
 
 
 if __name__ == '__main__':

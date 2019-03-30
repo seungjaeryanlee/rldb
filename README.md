@@ -13,9 +13,9 @@ Database of state-of-the-art RL algorithms
 
 ## Examples
 
-| Atari Breakout Scores                              | Atari Montezuma's Revenge Scores                                       |
-|:--------------------------------------------------:|:----------------------------------------------------------------------:|
-| ![Atari Breakout Scores](/docs/atari-breakout.png) | ![Atari Montezuma's Revenge Scores](/docs/atari-montezuma-revenge.png) |
+| Atari Space Invaders Scores | MuJoCo Walker2d Scores |
+|:-:|:-:|
+| ![Atari Space Invaders Scores](/docs/atari-space-invaders.png) | ![MuJoCo Walker2d Scores](/docs/mujoco-walker2d.png) |
 
 ## Papers
 
