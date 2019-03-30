@@ -4,10 +4,10 @@
 
 [![Build Status](https://travis-ci.com/seungjaeryanlee/rldb.svg?branch=master)](https://travis-ci.com/seungjaeryanlee/rldb)
 
-![Environments tracked in rldb](https://img.shields.io/badge/environments-57-blue.svg)
-![Papers tracked in rldb](https://img.shields.io/badge/papers-14-blue.svg)
-![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-54-blue.svg)
-![Entries tracked in rldb](https://img.shields.io/badge/entries-2451-blue.svg)
+![Environments tracked in rldb](https://img.shields.io/badge/environments-65-blue.svg)
+![Papers tracked in rldb](https://img.shields.io/badge/papers-15-blue.svg)
+![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-57-blue.svg)
+![Entries tracked in rldb](https://img.shields.io/badge/entries-2531-blue.svg)
 
 Database of state-of-the-art RL algorithms
 
@@ -39,6 +39,7 @@ Database of state-of-the-art RL algorithms
 - [x] [Asynchronous Methods for Deep Reinforcement Learning (Mnih et al., 2016)](https://arxiv.org/abs/1602.01783)
 - [x] [Trust Region Policy Optimization (Schulman et al., 2015)](https://arxiv.org/abs/1502.05477)
 - [x] [Proximal Policy Optimization Algorithms (Schulman et al., 2017)](https://arxiv.org/abs/1707.06347)
+- [x] [Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation (Wu et al., 2017)](https://arxiv.org/abs/1708.05144)
 
 #### Exploration
 

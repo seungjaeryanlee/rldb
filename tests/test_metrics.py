@@ -7,7 +7,7 @@ def test_envs_count():
     all_entries = rldb.find_all({})
     all_envs = set([e['env-title'] for e in all_entries])
 
-    assert len(all_envs) == 57
+    assert len(all_envs) == 65
 
 
 def test_paper_count():
@@ -15,7 +15,7 @@ def test_paper_count():
     all_entries = rldb.find_all({})
     all_papers = set([e['source-title'] for e in all_entries])
 
-    assert len(all_papers) == 14
+    assert len(all_papers) == 15
 
 
 def test_algo_count():
@@ -23,17 +23,18 @@ def test_algo_count():
     all_entries = rldb.find_all({})
     all_algos = set([e['algo-title'] for e in all_entries])
 
-    assert len(all_algos) == 54
+    assert len(all_algos) == 57
 
 
 def test_entries_count():
     """Verify number of entries in rldb. This number should match README."""
     all_entries = rldb.find_all({})
 
-    assert len(all_entries) == 2451
+    assert len(all_entries) == 2531
     assert len(all_entries) == (
         0
         + 171  # A3C
+        + 80   # ACKTR
         + 171  # C51
         + 179  # DDQN
         + 245  # DQN

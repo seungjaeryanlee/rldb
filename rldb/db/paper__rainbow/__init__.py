@@ -22,7 +22,7 @@ source = {
     ],
 
     #  ARXIV
-    "source-arxiv-id": "Matteo Hessel, Joseph Modayil, Hado van Hasselt, Tom Schaul, Georg Ostrovski, Will Dabney, Dan Horgan, Bilal Piot, Mohammad Azar, David Silver",
+    "source-arxiv-id": "1710.02298",
     "source-arxiv-version": 1,
 
     #  MISC.

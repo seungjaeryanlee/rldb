@@ -1,4 +1,5 @@
 from .paper__a3c import entries as a3c_entries
+from .paper__acktr import entries as acktr_entries
 from .paper__c51 import entries as c51_entries
 from .paper__drqn import entries as drqn_entries
 from .paper__ddqn import entries as ddqn_entries
@@ -16,6 +17,7 @@ from .paper__trpo import entries as trpo_entries
 entries = (
     []
     + a3c_entries
+    + acktr_entries
     + c51_entries
     + drqn_entries
     + ddqn_entries
