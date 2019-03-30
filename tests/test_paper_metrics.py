@@ -198,6 +198,24 @@ def test_rnd_paper_count():
     )
 
 
+def test_td3_paper_count():
+    """Verify number of entries in TD3 paper."""
+    dqn2013_entries = rldb.find_all({
+        'source-title': 'Addressing Function Approximation Error in Actor-Critic Methods',
+    })
+
+    assert len(dqn2013_entries) == (
+        0
+        + 7  # ACKTR
+        + 7  # DDPG
+        + 7  # Our DDPG
+        + 7  # PPO
+        + 7  # SAC
+        + 7  # TD3
+        + 7  # TRPO
+    )
+
+
 def test_trpo_paper_count():
     """Verify number of entries in TRPO paper."""
     dqn2013_entries = rldb.find_all({

@@ -12,6 +12,7 @@ from .paper__prioritized_dqn import entries as per_entries
 from .paper__rainbow import entries as rainbow_entries
 from .paper__gorila_dqn import entries as gorila_dqn_entries
 from .paper__ppo import entries as ppo_entries
+from .paper__td3 import entries as td3_entries
 from .paper__trpo import entries as trpo_entries
 
 entries = (
@@ -30,5 +31,6 @@ entries = (
     + rainbow_entries
     + gorila_dqn_entries
     + ppo_entries
+    + td3_entries
     + trpo_entries
 )
