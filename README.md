@@ -5,9 +5,9 @@
 [![Build Status](https://travis-ci.com/seungjaeryanlee/rldb.svg?branch=master)](https://travis-ci.com/seungjaeryanlee/rldb)
 
 ![Environments tracked in rldb](https://img.shields.io/badge/environments-65-blue.svg)
-![Papers tracked in rldb](https://img.shields.io/badge/papers-17-blue.svg)
-![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-64-blue.svg)
-![Entries tracked in rldb](https://img.shields.io/badge/entries-2694-blue.svg)
+![Papers tracked in rldb](https://img.shields.io/badge/papers-18-blue.svg)
+![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-65-blue.svg)
+![Entries tracked in rldb](https://img.shields.io/badge/entries-2751-blue.svg)
 
 Database of state-of-the-art RL algorithms
 
@@ -34,6 +34,7 @@ Database of state-of-the-art RL algorithms
 - [x] [A Distributional Perspective on Reinforcement Learning (Bellemare et al., 2017)](https://arxiv.org/abs/1707.06887)
 - [x] [Rainbow: Combining Improvements in Deep Reinforcement Learning (Hessel et al., 2017)](https://arxiv.org/abs/1710.02298)
 - [x] [Distributional Reinforcement Learning with Quantile Regression (Dabney et al., 2017)](https://arxiv.org/abs/1710.10044)
+- [x] [Implicit Quantile Networks for Distributional Reinforcement Learning (Dabney et al., 2018)](https://arxiv.org/abs/1806.06923)
 
 #### Policy Gradients
 
