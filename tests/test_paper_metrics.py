@@ -228,3 +228,17 @@ def test_trpo_paper_count():
         + 7  # TRPO (vine)
         + 7  # UCC-I
     )
+
+
+def test_trust_pcl_paper_count():
+    """Verify number of entries in Trust-PCL paper."""
+    trust_pcl_entries = rldb.find_all({
+        'source-title': 'Trust-PCL: An Off-Policy Trust Region Method for Continuous Control',
+    })
+
+    assert len(trust_pcl_entries) == (
+        0
+        + 5  # TRPO+GAE
+        + 5  # TRPO (from Trust-PCL)
+        + 5  # Trust-PCL
+    )

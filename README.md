@@ -5,9 +5,9 @@
 [![Build Status](https://travis-ci.com/seungjaeryanlee/rldb.svg?branch=master)](https://travis-ci.com/seungjaeryanlee/rldb)
 
 ![Environments tracked in rldb](https://img.shields.io/badge/environments-65-blue.svg)
-![Papers tracked in rldb](https://img.shields.io/badge/papers-18-blue.svg)
-![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-65-blue.svg)
-![Entries tracked in rldb](https://img.shields.io/badge/entries-2751-blue.svg)
+![Papers tracked in rldb](https://img.shields.io/badge/papers-19-blue.svg)
+![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-68-blue.svg)
+![Entries tracked in rldb](https://img.shields.io/badge/entries-2766-blue.svg)
 
 Database of state-of-the-art RL algorithms
 
@@ -48,4 +48,6 @@ Database of state-of-the-art RL algorithms
 
 - [x] [Exploration by Random Network Distillation (Burda et al., 2018)](https://arxiv.org/abs/1810.12894)
 
-### To Be Added
+#### Misc.
+
+- [x] [Trust-PCL: An Off-Policy Trust Region Method for Continuous Control (Nachum et al., 2017)](https://arxiv.org/abs/1707.01891)
