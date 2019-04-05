@@ -7,9 +7,13 @@ def find_one(filter_dict):
 
     filtered_entries = []
     for entry in entries:
+        is_match = True
         for k, v in filter_dict.items():
-            if k in entry and entry[k] == v:
-                return entry
+            if k not in entry or entry[k] != v:
+                is_match = False
+                break
+        if is_match:
+            return entry
 
     return None
 
@@ -20,8 +24,12 @@ def find_all(filter_dict):
 
     filtered_entries = []
     for entry in entries:
+        is_match = True
         for k, v in filter_dict.items():
-            if k in entry and entry[k] == v:
-                filtered_entries.append(entry)
+            if k not in entry or entry[k] != v:
+                is_match = False
+                break
+        if is_match:
+            filtered_entries.append(entry)
 
     return filtered_entries
