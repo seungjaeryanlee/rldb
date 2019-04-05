@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import rldb
 
 
-def env_barplot(env_title, plot_title):
-    entries = rldb.find_all({ 'env-title': env_title })
+def env_barplot(filter, plot_title, plot_name):
+    entries = rldb.find_all(filter)
 
     # Dedupe and sort entries by score, increasing
     sorted_entries = sorted(
@@ -15,13 +15,13 @@ def env_barplot(env_title, plot_title):
     deduped_entries = remove_duplicates(sorted_entries)
 
     # Draw bar plot
-    labels = ['{} ({})'.format(entry['algo-nickname'], entry['env-variant']) if 'env-variant' in entry else entry['algo-nickname'] for entry in deduped_entries]
+    labels = ['{} ({})'.format(entry['algo-nickname'], entry['env-variant']) if 'env-variant' in entry and 'env-variant' not in filter else entry['algo-nickname'] for entry in deduped_entries]
     scores = [entry['score'] for entry in deduped_entries]
     plt.figure(figsize=(12, 8))
     plt.barh(labels, scores)
     plt.title(plot_title)
     plt.tight_layout()
-    plt.savefig('docs/{}.png'.format(env_title))
+    plt.savefig('docs/{}.png'.format(plot_name))
     # plt.show()
     plt.clf()
 
@@ -49,8 +49,19 @@ def remove_duplicates(entries):
 
 
 def main():
-    env_barplot('atari-space-invaders', 'Atari Space Invaders Scores')
-    env_barplot('mujoco-walker2d', 'MuJoCo Walker2d Scores')
+    env_barplot(
+        filter={
+            'env-title': 'atari-space-invaders',
+            'env-variant': 'No-op start',
+        },
+        plot_title='Atari Space Invaders Scores (No-op start)',
+        plot_name='atari-space-invaders',
+    )
+    env_barplot(
+        filter={'env-title': 'mujoco-walker2d'},
+        plot_title='Atari Space Invaders Scores',
+        plot_name='mujoco-walker2d',
+    )
 
 
 if __name__ == '__main__':
