@@ -19,6 +19,7 @@ from .paper__trpo import entries as trpo_entries
 from .paper__trust_pcl import entries as trust_pcl_entries
 from .source__openai_baselines_cbd21ef import entries as openai_baselines_cbd21ef_entries
 from .source__openai_baselines_ea68f3b import entries as openai_baselines_ea68f3b_entries
+from .source_rl_baselines_zoo import entries as rl_baselines_zoo_entries
 
 entries = (
     []
@@ -44,4 +45,5 @@ entries = (
 
     + openai_baselines_cbd21ef_entries
     + openai_baselines_ea68f3b_entries
+    + rl_baselines_zoo_entries
 )

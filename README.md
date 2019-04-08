@@ -4,10 +4,10 @@
 
 [![Build Status](https://travis-ci.com/seungjaeryanlee/rldb.svg?branch=master)](https://travis-ci.com/seungjaeryanlee/rldb)
 
-![Environments tracked in rldb](https://img.shields.io/badge/environments-65-blue.svg)
-![Papers tracked in rldb](https://img.shields.io/badge/papers-21-blue.svg)
+![Environments tracked in rldb](https://img.shields.io/badge/environments-84-blue.svg)
+![Papers tracked in rldb](https://img.shields.io/badge/papers-22-blue.svg)
 ![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-77-blue.svg)
-![Entries tracked in rldb](https://img.shields.io/badge/entries-2829-blue.svg)
+![Entries tracked in rldb](https://img.shields.io/badge/entries-2918-blue.svg)
 
 Database of state-of-the-art RL algorithms
 
@@ -55,3 +55,4 @@ Database of state-of-the-art RL algorithms
 ## Sources
 
 - [x] [OpenAI Baselines](https://github.com/openai/baselines)
+- [x] [RL Baselines Zoo](https://github.com/araffin/rl-baselines-zoo)

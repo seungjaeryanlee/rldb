@@ -7,7 +7,7 @@ def test_envs_count():
     all_entries = rldb.find_all({})
     all_envs = set([e['env-title'] for e in all_entries])
 
-    assert len(all_envs) == 65
+    assert len(all_envs) == 84
 
 
 def test_source_count():
@@ -15,7 +15,7 @@ def test_source_count():
     all_entries = rldb.find_all({})
     all_sources = set([e['source-title'] for e in all_entries])
 
-    assert len(all_sources) == 21
+    assert len(all_sources) == 22
 
 
 def test_algo_count():
@@ -30,7 +30,7 @@ def test_entries_count():
     """Verify number of entries in rldb. This number should match README."""
     all_entries = rldb.find_all({})
 
-    assert len(all_entries) == 2829
+    assert len(all_entries) == 2918
     assert len(all_entries) == (
         0
         + 171  # A3C
@@ -55,4 +55,5 @@ def test_entries_count():
 
         + 49   # OpenAI Baselines cbd21ef
         + 14   # OpenAI Baselines ea68f3b
+        + 89   # RL Baselines Zoo b76641e
     )
