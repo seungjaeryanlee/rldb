@@ -67,7 +67,7 @@ def test_dqn2013_paper_count():
 def test_dqn_paper_count():
     """Verify number of entries in DQN paper."""
     dqn_entries = rldb.find_all({
-        'source-title': 'Human-level Control through Deep Reinforcement Learning',
+        'source-title': 'Human-level control through deep reinforcement learning',
     })
 
     assert len(dqn_entries) == (

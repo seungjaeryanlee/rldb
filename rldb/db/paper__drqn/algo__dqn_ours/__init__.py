@@ -15,7 +15,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Deep Q-Network Ours",
     "algo-nickname": "DQN Ours",
-    "algo-source-title": "Human-level Control through Deep Reinforcement Learning",
+    "algo-source-title": "Human-level control through deep reinforcement learning",
 
     # HYPERPARAMETERS
     "algo-frames": 0,  # TODO Unsure

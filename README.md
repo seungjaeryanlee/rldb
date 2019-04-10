@@ -24,7 +24,7 @@ Database of state-of-the-art RL algorithms
 #### Deep Q-Networks
 
 - [x] [Playing Atari with Deep Reinforcement Learning (Mnih et al., 2013)](https://arxiv.org/abs/1312.5602)
-- [x] [Human-level Control through Deep Reinforcement Learning (Mnih et al., 2015)](https://deepmind.com/research/dqn/)
+- [x] [Human-level control through deep reinforcement learning (Mnih et al., 2015)](https://deepmind.com/research/dqn/)
 - [x] [Deep Recurrent Q-Learning for Partially Observable MDPs (Hausknecht and Stone, 2015)](https://arxiv.org/abs/1507.06527)
 - [x] [Massively Parallel Methods for Deep Reinforcement Learning (Nair et al., 2015)](https://arxiv.org/abs/1507.04296)
 - [x] [Deep Reinforcement Learning with Double Q-learning (Hasselt et al., 2015)](https://arxiv.org/abs/1509.06461)

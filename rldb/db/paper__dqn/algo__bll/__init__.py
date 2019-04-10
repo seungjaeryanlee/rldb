@@ -14,7 +14,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Best Linear Learner",
     "algo-nickname": "Linear",
-    "algo-source-title": "Human-level Control through Deep Reinforcement Learning",
+    "algo-source-title": "Human-level control through deep reinforcement learning",
 }
 
 # Populate entries

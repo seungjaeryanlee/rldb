@@ -15,7 +15,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Deep Q-Network (from Rainbow)",
     "algo-nickname": "DQN (from Rainbow)",
-    "algo-source-title": "Human-level Control through Deep Reinforcement Learning",
+    "algo-source-title": "Human-level control through deep reinforcement learning",
 }
 
 # Populate entries

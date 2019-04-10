@@ -10,7 +10,7 @@ from .algo__dqn import entries as dqn_entries
 # Specify SOURCE
 source = {
     #  BASICS
-    "source-title": "Human-level Control through Deep Reinforcement Learning",
+    "source-title": "Human-level control through deep reinforcement learning",
     "source-nickname": "DQN",
     "source-authors": [
         "Volodymyr Mnih",

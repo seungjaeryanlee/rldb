@@ -14,7 +14,7 @@ algo = {
     # ALGORITHM
     "algo-title": "Deep Q-Network (from OpenAI Baselines cbd21ef)",
     "algo-nickname": "DQN (from OpenAI Baselines cbd21ef)",
-    "algo-source-title": "Human-level Control through Deep Reinforcement Learning",
+    "algo-source-title": "Human-level control through deep reinforcement learning",
 }
 
 # Populate entries
