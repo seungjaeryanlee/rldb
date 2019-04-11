@@ -12,8 +12,8 @@ from .entries import entries
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Proximal Policy Optimization (MPI) (from OpenAI Baselines cbd21ef)",
-    "algo-nickname": "PPO (MPI) (from OpenAI Baselines cbd21ef)",
+    "algo-title": "Proximal Policy Optimization (MPI)",
+    "algo-nickname": "PPO (MPI)",
     "algo-source-title": "Proximal Policy Optimization Algorithms",
 }
 

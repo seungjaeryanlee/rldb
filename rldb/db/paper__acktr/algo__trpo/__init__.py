@@ -13,8 +13,8 @@ from .entries import entries
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Trust Region Policy Optimization (from ACKTR)",
-    "algo-nickname": "TRPO (from ACKTR)",
+    "algo-title": "Trust Region Policy Optimization",
+    "algo-nickname": "TRPO",
     "algo-source-title": "Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation",
 }
 

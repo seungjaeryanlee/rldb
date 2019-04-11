@@ -12,8 +12,8 @@ from .entries import entries
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Advantage Actor Critic (from OpenAI Baselines cbd21ef)",
-    "algo-nickname": "A2C (from OpenAI Baselines cbd21ef)",
+    "algo-title": "Advantage Actor Critic",
+    "algo-nickname": "A2C",
     # A2C has no paper
 }
 

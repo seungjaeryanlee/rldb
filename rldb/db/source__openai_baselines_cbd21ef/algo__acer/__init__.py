@@ -12,8 +12,8 @@ from .entries import entries
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Actor-Critic with Experience Replay (from OpenAI Baselines cbd21ef)",
-    "algo-nickname": "ACER (from OpenAI Baselines cbd21ef)",
+    "algo-title": "Actor-Critic with Experience Replay",
+    "algo-nickname": "ACER",
     "algo-source-title": "Sample Efficient Actor-Critic with Experience Replay",
 }
 

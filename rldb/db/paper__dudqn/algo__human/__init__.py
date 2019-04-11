@@ -13,8 +13,8 @@ from .entries import entries
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Human (from Dueling DQN)",
-    "algo-nickname": "Human (from Dueling DQN)",
+    "algo-title": "Human",
+    "algo-nickname": "Human",
 
     # HYPERPARAMETERS
     # Not specified

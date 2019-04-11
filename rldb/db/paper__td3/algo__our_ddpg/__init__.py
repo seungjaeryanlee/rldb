@@ -12,8 +12,8 @@ from .entries import entries
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Our Deep Deterministic Policy Gradient (from TD3)",
-    "algo-nickname": "Our DDPG (from TD3)",
+    "algo-title": "Our Deep Deterministic Policy Gradient",
+    "algo-nickname": "Our DDPG",
     "algo-source-title": "Continuous control with deep reinforcement learning",
 }
 

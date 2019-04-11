@@ -10,13 +10,11 @@ def env_barplot(filter, plot_title, plot_name):
     sorted_entries = sorted(
         entries,
         key=lambda entry: entry['score'],
-        reverse=True
+        reverse=True,
     )
-    deduped_entries = remove_duplicates(sorted_entries)
+    labels, scores = entries_to_labels_scores(sorted_entries)
 
     # Draw bar plot
-    labels = ['{} ({})'.format(entry['algo-nickname'], entry['env-variant']) if 'env-variant' in entry and 'env-variant' not in filter else entry['algo-nickname'] for entry in deduped_entries]
-    scores = [entry['score'] for entry in deduped_entries]
     plt.figure(figsize=(12, 8))
     plt.barh(labels, scores)
     plt.title(plot_title)
@@ -26,26 +24,25 @@ def env_barplot(filter, plot_title, plot_name):
     plt.clf()
 
 
-def remove_duplicates(entries):
-    duplicate_indices = []
-    for i, entry in enumerate(entries):
-        if i == len(entries) - 1:
-            break
-        next_entry = entries[i + 1]
+def entries_to_labels_scores(entries):
+    """
+    Convert entries to labels and scores for barplot.
+    """
+    nicknames = [entry['algo-nickname'] for entry in entries]
 
-        if entry['algo-nickname'] == next_entry['algo-nickname'] and ('env-variant' in entry and 'env-variant' in next_entry and entry['env-variant'] == next_entry['env-variant']):
-            if entry['score'] == next_entry['score']:
-                duplicate_indices.append(i + 1)
-            else:
-                print('[WARN] Algorithm {} have different scores ({}, {}) from source ({}, {}) in env {}. Consider renaming them.'.format(
-                    entry['algo-nickname'],
-                    entry['score'], next_entry['score'],
-                    entry['source-nickname'], next_entry['source-nickname'],
-                    '{} ({})'.format(entry['env-title'], entry['env-variant']) if 'env-variant' in entry else entry['env-title'],
-                ))
+    labels = []
+    scores = []    
+    for entry in entries:
+        label = entry['algo-nickname']
 
-    deduped_entries = [entry for i, entry in enumerate(entries) if i not in duplicate_indices]
-    return deduped_entries
+        # Add source info if needed
+        if nicknames.count(entry['algo-nickname']) > 1:
+            label += ' (From {})'.format(entry['source-nickname'])
+
+        labels.append(label)
+        scores.append(entry['score'])
+
+    return labels, scores
 
 
 def main():

@@ -13,8 +13,8 @@ from .entries import entries
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Advantage Actor Critic (from ACKTR)",
-    "algo-nickname": "A2C (from ACKTR)",
+    "algo-title": "Advantage Actor Critic",
+    "algo-nickname": "A2C",
     "algo-source-title": "Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation",
 }
 

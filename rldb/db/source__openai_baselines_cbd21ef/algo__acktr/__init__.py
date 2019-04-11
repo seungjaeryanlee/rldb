@@ -12,8 +12,8 @@ from .entries import entries
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Actor Critic using Kronecker-factored Trust Region (from OpenAI Baselines cbd21ef)",
-    "algo-nickname": "ACKTR (from OpenAI Baselines cbd21ef)",
+    "algo-title": "Actor Critic using Kronecker-factored Trust Region",
+    "algo-nickname": "ACKTR",
     "algo-source-title": "Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation",
 }
 

@@ -12,8 +12,8 @@ from .entries import entries
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Human (from DQN2013)",
-    "algo-nickname": "Human (from DQN2013)",
+    "algo-title": "Human",
+    "algo-nickname": "Human",
 
     # HYPERPARAMETERS
     "algo-frames": 0,  # TODO Unsure

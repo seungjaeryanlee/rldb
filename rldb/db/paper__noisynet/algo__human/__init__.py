@@ -12,8 +12,8 @@ from .entries import entries
 # Specify ALGORITHM
 algo = {
     # ALGORITHM
-    "algo-title": "Human (from NoisyNet)",
-    "algo-nickname": "Human (from NoisyNet)",
+    "algo-title": "Human",
+    "algo-nickname": "Human",
 }
 
 # Populate entries
