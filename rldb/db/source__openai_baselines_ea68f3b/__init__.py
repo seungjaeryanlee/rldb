@@ -6,7 +6,7 @@ from .algo__ppo2 import entries as ppo2_entries
 source = {
     #  BASICS
     "source-title": "OpenAI Baselines ea68f3b",
-    "source-nickname": "OpenAI Baselines ea68f3b",
+    "source-nickname": "Baselines",
     "source-authors": [
         "Prafulla Dhariwal",
         "Christopher Hesse",
