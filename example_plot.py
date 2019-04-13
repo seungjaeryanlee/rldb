@@ -1,6 +1,70 @@
+from decimal import Decimal
+
 import matplotlib.pyplot as plt
 
 import rldb
+
+
+def set_label(fig, ax, bar, entry, BBOX_TO_BAR_UNIT):
+    algo_text = ax.text(
+        x=bar.get_x()-100,
+        y=bar.get_y()+0.4,
+        s=str(entry['algo-nickname']),
+        color='black',
+        fontweight='bold',
+        ha='right',
+        va='bottom'
+    )
+    source_text = ax.text(
+        x=bar.get_x()-100,
+        y=bar.get_y()+bar.get_height()-0.4,
+        s=str(entry['source-nickname']),
+        color='red',
+        ha='right',
+        va='top'
+    )
+    source_text_x = source_text.get_position()[0]
+    source_text_width = source_text.get_window_extent(renderer=fig.canvas.get_renderer()).width
+
+    if 'algo-frames' in entry:
+        # TODO This is currently stub
+        frames_text = ax.text(
+            x=source_text_x - source_text_width * BBOX_TO_BAR_UNIT - 50,
+            y=bar.get_y()+bar.get_height()-0.4,
+            s='{:.2E}'.format(Decimal(entry['algo-frames'])),
+            color='green',
+            ha='right',
+            va='top'
+        )
+
+
+def set_score_text(fig, ax, bar, entry):
+    score_text = ax.text(
+        x=bar.get_x() + bar.get_width() - 30,
+        y=bar.get_y() + bar.get_height() / 2,
+        s=str(entry['score']),
+        color='white',
+        fontweight='bold',
+        ha='right',
+        va='center',
+    )
+
+    # Check if putting score label outside of barplot would make it too long
+    bar_x1 = bar.get_window_extent(renderer=fig.canvas.get_renderer()).x1
+    ax_x1 = ax.get_window_extent(renderer=fig.canvas.get_renderer()).x1
+    score_text_width = score_text.get_window_extent(renderer=fig.canvas.get_renderer()).width
+
+    if bar_x1 + score_text_width < ax_x1:
+        score_text.set_x(bar.get_x() + bar.get_width() + 50)
+        score_text.set_ha('left')
+
+        if entry['algo-title'] == 'Human':
+            color = 'red'
+        elif entry['algo-title'] == 'Random':
+            color = 'black'
+        else:
+            color = 'darkblue'
+        score_text.set_color(color)
 
 
 def env_barplot(filter, plot_title, plot_name):
@@ -15,42 +79,21 @@ def env_barplot(filter, plot_title, plot_name):
     labels, scores, colors = entries_to_labels_scores(sorted_entries)
 
     # Draw bar plot
-    fig, ax = plt.subplots(figsize=(12, 8))
+    fig, ax = plt.subplots(figsize=(12, 12))
     bars = ax.barh(labels, scores, color=colors)
+    plt.yticks(range(len(scores)), [''] * len(scores))
 
     # Add title
     plt.title(plot_title)
 
     # Add score labels
+    bar_x0 = bars[0].get_window_extent(renderer=fig.canvas.get_renderer()).x0
+    bar_x1 = bars[0].get_window_extent(renderer=fig.canvas.get_renderer()).x1
+    BBOX_TO_BAR_UNIT = bars[0].get_width() / (bar_x1 - bar_x0)
     switch_label_align = False # If true, put score label outside of barplot
-    for i, (bar, entry, score) in enumerate(zip(bars, sorted_entries, scores)):
-
-        text = ax.text(
-            x=bar.get_x() + bar.get_width() - 50,
-            y=bar.get_y() + bar.get_height() / 2,
-            s=str(score),
-            color='white',
-            fontweight='bold',
-            ha='right',
-            va='center',
-        )
-
-        # Check if putting score label outside of barplot would make it too long
-        bar_x1 = bar.get_window_extent(renderer=fig.canvas.get_renderer()).x1
-        ax_x1 = ax.get_window_extent(renderer=fig.canvas.get_renderer()).x1
-        text_width = text.get_window_extent(renderer=fig.canvas.get_renderer()).width
-        if switch_label_align or bar_x1 + text_width < ax_x1:
-            switch_label_align = True
-            text.set_x(bar.get_x() + bar.get_width() + 50)
-            text.set_ha('left')
-
-            if entry['algo-title'] == 'Human':
-                color = 'red'
-            elif entry['algo-title'] == 'Random':
-                color = 'black'
-            else:
-                color = 'darkblue'
-            text.set_color(color)
+    for i, (bar, entry) in enumerate(zip(bars, sorted_entries)):
+        set_label(fig, ax, bar, entry, BBOX_TO_BAR_UNIT)
+        set_score_text(fig, ax, bar, entry)
 
     plt.tight_layout()
     plt.savefig('docs/{}.png'.format(plot_name))
