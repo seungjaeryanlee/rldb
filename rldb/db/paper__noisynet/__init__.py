@@ -1,5 +1,3 @@
-from .algo__human import entries as human_entries
-from .algo__random import entries as random_entries
 from .algo__dqn import entries as dqn_entries
 from .algo__noisynet_dqn import entries as noisynet_dqn_entries
 from .algo__a3c import entries as a3c_entries
@@ -63,8 +61,6 @@ source = {
 # Populate entries
 entries = (
     []
-    + human_entries
-    + random_entries
     + dqn_entries
     + noisynet_dqn_entries
     + a3c_entries

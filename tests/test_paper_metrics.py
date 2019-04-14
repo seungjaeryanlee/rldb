@@ -134,11 +134,9 @@ def test_noisynet_paper_count():
         + 57  # A3C
         + 57  # DQN
         + 57  # DuDQN
-        + 57  # Human
         + 57  # NoisyNet A3C
         + 57  # NoisyNet DQN
         + 57  # NoisyNet DuDQN
-        + 57  # Random
     )
 
 
