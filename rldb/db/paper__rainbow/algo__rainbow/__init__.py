@@ -15,6 +15,9 @@ algo = {
     "algo-title": "Rainbow",
     "algo-nickname": "Rainbow",
     "algo-source-title": "Rainbow: Combining Improvements in Deep Reinforcement Learning",
+
+    # HYPERPARAMETERS
+    "algo-frames": 200 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

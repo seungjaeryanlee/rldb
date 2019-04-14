@@ -9,8 +9,7 @@ algo = {
     "algo-source-title": "Deep Reinforcement Learning with Double Q-learning",
 
     # HYPERPARAMETERS
-    # Not specified
-    "algo-frames": 0,
+    "algo-frames": 200 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

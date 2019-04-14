@@ -15,6 +15,9 @@ algo = {
     "algo-title": "NoisyNet Asynchronous Advantage Actor Critic",
     "algo-nickname": "NoisyNet A3C",
     "algo-source-title": "Noisy Networks for Exploration",
+
+    # HYPERPARAMETERS
+    "algo-frames": 320 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

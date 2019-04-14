@@ -17,8 +17,7 @@ algo = {
     "algo-source-title": "Large-Scale Study of Curiosity-Driven Learning",
 
     # HYPERPARAMETERS
-    # Not specified
-    "algo-frames": 1970000000,  # 1.97B
+    "algo-frames": 1.97 * 1000 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

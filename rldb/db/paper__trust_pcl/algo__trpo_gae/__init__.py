@@ -17,8 +17,7 @@ algo = {
     "algo-source-title": "High-Dimensional Continuous Control Using Generalized Advantage Estimation",
 
     # HYPERPARAMETERS
-    # Not specified
-    "algo-frames": 10000000,
+    "algo-frames": 10 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

@@ -15,6 +15,9 @@ algo = {
     "algo-title": "Quantile Regression Deep Q-Network with Huber Quantile Loss",
     "algo-nickname": "QR-DQN-1",
     "algo-source-title": "Distributional Reinforcement Learning with Quantile Regression",
+
+    # HYPERPARAMETERS
+    "algo-frames": 200 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

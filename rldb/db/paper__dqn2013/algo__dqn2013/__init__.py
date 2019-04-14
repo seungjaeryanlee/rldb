@@ -17,7 +17,7 @@ algo = {
     "algo-source-title": "Playing Atari with Deep Reinforcement Learning",
 
     # HYPERPARAMETERS
-    "algo-frames": 0,  # TODO Unsure
+    "algo-frames": 10 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

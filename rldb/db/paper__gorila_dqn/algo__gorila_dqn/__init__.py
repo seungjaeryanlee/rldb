@@ -15,9 +15,6 @@ algo = {
     "algo-title": "General Reinforcement Learning Architecture Deep Q-Network",
     "algo-nickname": "Gorila DQN",
     "algo-source-title": "General Reinforcement Learning Architecture Deep Q-Network",
-
-    # HYPERPARAMETERS
-    "algo-frames": 0,  # TODO Unsure
 }
 
 # Populate entries

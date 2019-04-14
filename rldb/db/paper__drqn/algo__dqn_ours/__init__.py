@@ -16,9 +16,6 @@ algo = {
     "algo-title": "Deep Q-Network Ours",
     "algo-nickname": "DQN Ours",
     "algo-source-title": "Human-level control through deep reinforcement learning",
-
-    # HYPERPARAMETERS
-    "algo-frames": 0,  # TODO Unsure
 }
 
 # Populate entries

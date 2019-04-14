@@ -15,6 +15,10 @@ algo = {
     "algo-title": "Asynchronous Advantage Actor Critic Feed Forward",
     "algo-nickname": "A3C FF",
     "algo-source-title": "Asynchronous Methods for Deep Reinforcement Learning",
+
+    # HYPERPARAMETERS
+    # NOTE 4M frames per epoch, 50 epochs
+    "algo-frames": 200 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

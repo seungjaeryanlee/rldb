@@ -14,9 +14,6 @@ algo = {
     # ALGORITHM
     "algo-title": "Random",
     "algo-nickname": "Random",
-
-    # HYPERPARAMETERS
-    "algo-frames": 0,  # TODO Unsure
 }
 
 # Populate entries

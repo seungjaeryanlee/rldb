@@ -15,10 +15,6 @@ algo = {
     # ALGORITHM
     "algo-title": "Human",
     "algo-nickname": "Human",
-
-    # HYPERPARAMETERS
-    # Not specified
-    "algo-frames": 0,
 }
 
 # Populate entries

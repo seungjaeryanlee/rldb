@@ -17,7 +17,8 @@ algo = {
     "algo-source-title": "Human-level control through deep reinforcement learning",
 
     # HYPERPARAMETERS
-    "algo-frames": 0,  # TODO Unsure
+    # NOTE Is this really 50M and not 200M?
+    "algo-frames": 50 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

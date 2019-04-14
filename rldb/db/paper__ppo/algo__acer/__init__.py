@@ -17,7 +17,7 @@ algo = {
     "algo-source-title": "Sample Efficient Actor-Critic with Experience Replay",
 
     # HYPERPARAMETERS
-    "algo-frames": 40000000,
+    "algo-frames": 4 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

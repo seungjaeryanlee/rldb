@@ -16,6 +16,9 @@ algo = {
     "algo-title": "Deep Q-Network",
     "algo-nickname": "DQN",
     "algo-source-title": "Human-level control through deep reinforcement learning",
+
+    # HYPERPARAMETERS
+    "algo-frames": 200 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

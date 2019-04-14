@@ -15,6 +15,9 @@ algo = {
     "algo-title": "Twin Delayed Deep Deterministic Policy Gradient",
     "algo-nickname": "TD3",
     "algo-source-title": "Addressing Function Approximation Error in Actor-Critic Methods",
+
+    # HYPERPARAMETERS
+    "algo-frames": 1 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries  

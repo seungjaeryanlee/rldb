@@ -15,6 +15,9 @@ algo = {
     "algo-title": "Proximal Policy Optimization",
     "algo-nickname": "PPO",
     "algo-source-title": "Proximal Policy Optimization Algorithms",
+
+    # HYPERPARAMETERS
+    "algo-frames": 1 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries  

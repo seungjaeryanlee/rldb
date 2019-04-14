@@ -17,8 +17,7 @@ algo = {
     "algo-source-title": "Prioritized Experience Replay",
 
     # HYPERPARAMETERS
-    # Not specified
-    "algo-frames": 0,
+    "algo-frames": 200 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

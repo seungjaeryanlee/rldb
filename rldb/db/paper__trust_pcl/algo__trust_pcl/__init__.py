@@ -17,8 +17,7 @@ algo = {
     "algo-source-title": "Trust-PCL: An Off-Policy Trust Region Method for Continuous Control",
 
     # HYPERPARAMETERS
-    # Not specified
-    "algo-frames": 10000000,
+    "algo-frames": 10 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

@@ -15,6 +15,9 @@ algo = {
     "algo-title": "NoisyNet Dueling Deep Q-Networks",
     "algo-nickname": "NoisyNet DuDQN",
     "algo-source-title": "Noisy Networks for Exploration",
+
+    # HYPERPARAMETERS
+    "algo-frames": 200 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

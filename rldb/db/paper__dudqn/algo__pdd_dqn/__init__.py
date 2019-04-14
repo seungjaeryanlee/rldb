@@ -17,8 +17,8 @@ algo = {
     "algo-source-title": "Dueling Network Architectures for Deep Reinforcement Learning",
 
     # HYPERPARAMETERS
-    # Not specified
-    "algo-frames": 0,
+    # NOTE Assume closely following setup of DDQN also means the number of frames are same
+    "algo-frames": 200 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

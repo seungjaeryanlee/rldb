@@ -17,7 +17,7 @@ algo = {
     "algo-source-title": "Proximal Policy Optimization Algorithm",
 
     # HYPERPARAMETERS
-    "algo-frames": 40000000,
+    "algo-frames": 4 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

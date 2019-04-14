@@ -15,6 +15,9 @@ algo = {
     "algo-title": "Dueling Deep Q-Network",
     "algo-nickname": "Dueling DQN",
     "algo-source-title": "Dueling Network Architectures for Deep Reinforcement Learning",
+
+    # HYPERPARAMETERS
+    "algo-frames": 200 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries

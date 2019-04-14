@@ -15,6 +15,9 @@ algo = {
     "algo-title": "Trust Region Policy Optimization",
     "algo-nickname": "TRPO",
     "algo-source-title": "Trust Region Policy Optimization",
+
+    # HYPERPARAMETERS
+    "algo-frames": 1 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries  

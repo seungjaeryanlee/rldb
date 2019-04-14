@@ -15,6 +15,9 @@ algo = {
     "algo-title": "Deep Deterministic Policy Gradient",
     "algo-nickname": "DDPG",
     "algo-source-title": "Continuous control with deep reinforcement learning",
+
+    # HYPERPARAMETERS
+    "algo-frames": 1 * 1000 * 1000,  # Number of frames
 }
 
 # Populate entries  
