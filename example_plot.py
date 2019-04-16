@@ -67,6 +67,40 @@ def set_score_text(fig, ax, bar, entry):
         score_text.set_color(color)
 
 
+def set_label_legends(fig, ax, bars, BBOX_TO_BAR_UNIT):
+    origin_x = bars[-1].get_x()
+    origin_y = bars[-1].get_y() + bars[-1].get_height()
+
+    algo_text = ax.text(
+        x=origin_x - 100,
+        y=origin_y + 0.4,
+        s='Algorithm',
+        color='black',
+        fontweight='bold',
+        ha='right',
+        va='bottom'
+    )
+    source_text = ax.text(
+        x=origin_x - 100,
+        y=origin_y + bars[-1].get_height() - 0.4,
+        s='Source',
+        color='red',
+        ha='right',
+        va='top'
+    )
+    source_text_x = source_text.get_position()[0]
+    source_text_width = source_text.get_window_extent(renderer=fig.canvas.get_renderer()).width
+
+    frames_text = ax.text(
+        x=source_text_x - source_text_width * BBOX_TO_BAR_UNIT - 50,
+        y=origin_y + bars[-1].get_height() - 0.4,
+        s='Frames',
+        color='green',
+        ha='right',
+        va='top'
+    )
+
+
 def env_barplot(filter, plot_title, plot_name):
     entries = rldb.find_all(filter)
 
@@ -94,6 +128,10 @@ def env_barplot(filter, plot_title, plot_name):
     for i, (bar, entry) in enumerate(zip(bars, sorted_entries)):
         set_label(fig, ax, bar, entry, BBOX_TO_BAR_UNIT)
         set_score_text(fig, ax, bar, entry)
+
+    # Add label legends
+    set_label_legends(fig, ax, bars, BBOX_TO_BAR_UNIT)
+
 
     plt.tight_layout()
     plt.savefig('docs/{}.png'.format(plot_name))
