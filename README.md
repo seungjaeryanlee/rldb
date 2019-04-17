@@ -17,6 +17,108 @@ Database of state-of-the-art RL algorithms
 |:-:|:-:|
 | ![Atari Space Invaders Scores](/docs/atari-space-invaders.png) | ![MuJoCo Walker2d Scores](/docs/mujoco-walker2d.png) |
 
+## Entry Structure
+
+Here is the format of every entry:
+
+```python3
+{
+    # BASICS
+    "source-title": "",
+    "source-nickname": "",
+    "source-authors": [],
+
+    # MISC.
+    "source-bibtex": "",
+
+    # ALGORITHM
+    "algo-title": "",
+    "algo-nickname": "",
+    "algo-source-title": "",
+
+    # SCORE
+    "env-title": "",
+    "score": 0,
+}
+```
+
+- `source-title` is the full title of the source of the score: it can be the title of the paper or GitHub repository title. `source-nickname` is a popular nickname or acronym for that title if it exists, otherwise it is the same as `source-title`. 
+- `source-authors` are a list of authors or contributors.
+- `source-bibtex` is a BibTeX-format citation.
+- `algo-title` is the full title of the algorithm used. `algo-nickname` is the nickname or acronym for that algorithm if it exists, otherwise it is the same as `algo-nickname`.
+- `algo-source-title` is the title of the source of the **algorithm**. It can and often is different from `source-title`.
+
+For example, the **Space Invaders** score of **Asynchronous Advantage Actor Critic (A3C)** algorithm in the **Noisy Networks for Exploration (NoisyNet)** paper is represented by the following entry:
+
+```python3
+{
+    #  BASICS
+    "source-title": "Noisy Networks for Exploration",
+    "source-nickname": "NoisyNet",
+    "source-authors": [
+        "Meire Fortunato",
+        "Mohammad Gheshlaghi Azar",
+        "Bilal Piot",
+        "Jacob Menick",
+        "Ian Osband",
+        "Alex Graves",
+        "Vlad Mnih",
+        "Remi Munos",
+        "Demis Hassabis",
+        "Olivier Pietquin",
+        "Charles Blundell",
+        "Shane Legg",
+    ],
+
+    #  ARXIV
+    "source-arxiv-id": "1706.10295",
+    "source-arxiv-version": 2,
+
+    #  MISC.
+    "source-bibtex": """
+@article{DBLP:journals/corr/FortunatoAPMOGM17,
+    author    = {Meire Fortunato and
+                 Mohammad Gheshlaghi Azar and
+                 Bilal Piot and
+                 Jacob Menick and
+                 Ian Osband and
+                 Alex Graves and
+                 Vlad Mnih and
+                 R{\'{e}}mi Munos and
+                 Demis Hassabis and
+                 Olivier Pietquin and
+                 Charles Blundell and
+                 Shane Legg},
+    title     = {Noisy Networks for Exploration},
+    journal   = {CoRR},
+    volume    = {abs/1706.10295},
+    year      = {2017},
+    url       = {http://arxiv.org/abs/1706.10295},
+    archivePrefix = {arXiv},
+    eprint    = {1706.10295},
+    timestamp = {Mon, 13 Aug 2018 16:46:11 +0200},
+    biburl    = {https://dblp.org/rec/bib/journals/corr/FortunatoAPMOGM17},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}""",
+
+    # ALGORITHM
+    "algo-title": "Asynchronous Advantage Actor Critic",
+    "algo-nickname": "A3C",
+    "algo-source-title": "Asynchronous Methods for Deep Reinforcement Learning",
+
+    # HYPERPARAMETERS
+    "algo-frames": 320 * 1000 * 1000,  # Number of frames
+
+    # SCORE
+    "env-title": "atari-space-invaders",
+    "env-variant": "No-op start",
+    "score": 1034,
+    "stddev": 49,
+}
+```
+
+Note that, as shown here, the entry can contain additional information.
+
 ## Papers
 
 ### Completed
