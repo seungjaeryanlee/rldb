@@ -4,11 +4,11 @@ import rldb
 
 def test_openai_baselines_cbd21ef_count():
     """Verify number of entries in OpenAI Baselines."""
-    a3c_entries = rldb.find_all({
+    baselines_cbd21ef_entries = rldb.find_all({
         'source-title': 'OpenAI Baselines cbd21ef',
     })
 
-    assert len(a3c_entries) == (
+    assert len(baselines_cbd21ef_entries) == (
         0
         + 7  # A2C
         + 7  # ACER
@@ -22,11 +22,11 @@ def test_openai_baselines_cbd21ef_count():
 
 def test_openai_baselines_ea68f3b_count():
     """Verify number of entries in OpenAI Baselines."""
-    a3c_entries = rldb.find_all({
+    baselines_ea68f3b_entries = rldb.find_all({
         'source-title': 'OpenAI Baselines ea68f3b',
     })
 
-    assert len(a3c_entries) == (
+    assert len(baselines_ea68f3b_entries) == (
         0
         + 7  # TRPO (MPI)
         + 7  # PPO2
