@@ -9,7 +9,7 @@ from .algo__random import entries as random_entries
 source = {
     #  BASICS
     "source-title": "Dueling Network Architectures for Deep Reinforcement Learning",
-    "source-nickname": "Dueling DQN",
+    "source-nickname": "DuDQN",
     "source-authors": [
         "Ziyu Wang",
         "Tom Schaul",

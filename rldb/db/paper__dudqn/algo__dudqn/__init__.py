@@ -13,7 +13,7 @@ from .entries import entries
 algo = {
     # ALGORITHM
     "algo-title": "Dueling Deep Q-Network",
-    "algo-nickname": "Dueling DQN",
+    "algo-nickname": "DuDQN",
     "algo-source-title": "Dueling Network Architectures for Deep Reinforcement Learning",
 
     # HYPERPARAMETERS
