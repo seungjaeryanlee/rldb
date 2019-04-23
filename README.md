@@ -4,10 +4,10 @@
 
 [![Build Status](https://travis-ci.com/seungjaeryanlee/rldb.svg?branch=master)](https://travis-ci.com/seungjaeryanlee/rldb)
 
-![Environments tracked in rldb](https://img.shields.io/badge/environments-84-blue.svg)
-![Papers tracked in rldb](https://img.shields.io/badge/papers-22-blue.svg)
-![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-52-blue.svg)
-![Entries tracked in rldb](https://img.shields.io/badge/entries-2804-blue.svg)
+![Environments tracked in rldb](https://img.shields.io/badge/environments-114-blue.svg)
+![Papers tracked in rldb](https://img.shields.io/badge/papers-23-blue.svg)
+![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-58-blue.svg)
+![Entries tracked in rldb](https://img.shields.io/badge/entries-3152-blue.svg)
 
 Database of RL algorithms
 
