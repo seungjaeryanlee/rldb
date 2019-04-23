@@ -227,6 +227,7 @@ Note that, as shown here, the entry can contain additional information.
 - [x] [Proximal Policy Optimization Algorithms (Schulman et al., 2017)](https://arxiv.org/abs/1707.06347)
 - [x] [Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation (Wu et al., 2017)](https://arxiv.org/abs/1708.05144)
 - [x] [Addressing Function Approximation Error in Actor-Critic Methods (Fujimoto et al., 2018)](https://arxiv.org/abs/1802.09477)
+- [x] [IMPALA: Importance Weighted Actor-Learner Architectures (Espeholt et al., 2018)](https://arxiv.org/abs/1802.01561)
 
 #### Exploration
 

@@ -1,7 +1,7 @@
 """
 Generate entries.py from raw table in papers.
 """
-envs = [
+atari57_envs = [
     'atari-alien',
     'atari-amidar',
     'atari-assault',
@@ -60,12 +60,44 @@ envs = [
     'atari-yars-revenge',
     'atari-zaxxon',
 ]
+dmlab30_envs = [
+    "rooms_collect_good_objects_test",
+    "rooms_exploit_deferred_effects_test",
+    "rooms_select_nonmatching_object",
+    "rooms_watermaze",
+    "rooms_keys_doors_puzzle",
+    "language_select_described_object",
+    "language_select_located_object",
+    "language_execute_random_task",
+    "language_answer_quantitative_question",
+    "lasertag_one_opponent_large",
+    "lasertag_three_oponents_large",
+    "lasertag_one_opponent_small",
+    "lasertag_three_opponents_small",
+    "natlab_fixed_large_map",
+    "natlab_varying_map_regrowth",
+    "natlab_varying_map_randomized",
+    "skymaze_irreversible_path_hard",
+    "skymaze_irreversible_path_varied",
+    "pyschlab_arbitrary_visuomotor_mapping",
+    "pyschlab_continuous_recognition",
+    "pyschlab_sequential_comparison",
+    "pyschlab_visual_search",
+    "explore_object_locations_small",
+    "explore_object_locations_large",
+    "explore_obstructed_goals_small",
+    "explore_obstructed_goals_large",
+    "explore_goal_locations_small",
+    "explore_goal_locations_large",
+    "explore_object_rewards_few",
+    "explore_object_rewards_many",
+]
 
 
-def parse_scores():
+def parse_scores(get_score_from_line):
     with open('input.txt', 'r') as f:
         lines = f.readlines()[1:]
-        scores = [line.strip().split(' ')[-1] for line in lines]
+        scores = [get_score_from_line(line.strip()) for line in lines]
 
     return scores
 
@@ -75,7 +107,7 @@ def generate_entries(envs: list, scores: list, env_variant: str = ''):
         raise AssertionError('Number of environments does not match number of scores. Check which environments are used in the paper!')
 
     with open('output.txt', 'w') as f:
-        f.write("[\n")
+        f.write("entries = [\n")
         for env, score in zip(envs, scores):
             f.write("    {\n")
             f.write("        \"env-title\": \"{}\",\n".format(env))
@@ -87,7 +119,8 @@ def generate_entries(envs: list, scores: list, env_variant: str = ''):
 
 
 if __name__ == '__main__':
-    scores = parse_scores()
+    # Prefer using backward-indices (-1, -2) since environment names can contain spaces
+    scores = parse_scores(lambda line: line.split(' ')[-1])
 
     # env_variant should be '', 'Human start' or 'No-op start'
-    generate_entries(envs, scores, env_variant='Human start')
+    generate_entries(dmlab30_envs, scores, env_variant='No-op start')

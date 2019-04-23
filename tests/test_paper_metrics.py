@@ -123,6 +123,25 @@ def test_gorila_dqn_paper_count():
     )
 
 
+def test_impala_paper_count():
+    """Verify number of entries in IMPALA paper."""
+    impala_entries = rldb.find_all({
+        'source-title': 'IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures',
+    })
+
+    assert len(impala_entries) == (
+        0
+        + 57  # Atari-57 IMPALA (deep)
+        + 57  # Atari-57 IMPALA (deep, multitask)
+        + 57  # Atari-57 IMPALA (shallow)
+        + 57  # Atari-57 Reactor
+        + 30  # DMLab-30 Experts
+        + 30  # DMLab-30 Human
+        + 30  # DMLab-30 IMPALA
+        + 30  # DMLab-30 Random
+    )
+
+
 def test_noisynet_paper_count():
     """Verify number of entries in NoisyNet paper."""
     noisynet_entries = rldb.find_all({
