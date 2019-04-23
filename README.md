@@ -9,13 +9,95 @@
 ![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-52-blue.svg)
 ![Entries tracked in rldb](https://img.shields.io/badge/entries-2804-blue.svg)
 
-Database of state-of-the-art RL algorithms
-
-## Examples
+Database of RL algorithms
 
 | Atari Space Invaders Scores | MuJoCo Walker2d Scores |
 |:-:|:-:|
 | ![Atari Space Invaders Scores](/docs/atari-space-invaders.png) | ![MuJoCo Walker2d Scores](/docs/mujoco-walker2d.png) |
+
+## Examples
+
+You can use `rldb.find_all({})` to retrieve all existing entries in `rldb`.
+
+```python
+import rldb
+
+
+all_entries = rldb.find_all({})
+```
+
+You can also filter entries by specifying key-value pairs that the entry must match:
+
+```python
+import rldb
+
+
+dqn_entries = rldb.find_all({'algo-nickname': 'DQN'})
+breakout_noop_entries = rldb.find_all({
+    'env-title': 'atari-breakout',
+    'env-variant': 'No-op start',
+})
+```
+
+You can also use `rldbl.find_one(filter_dict)` to find one entry that matches the key-value pair specified in `filter_dict`:
+
+```python
+import rldb
+import pprint
+
+
+entry = rldb.find_one({
+    'env-title': 'atari-pong',
+    'algo-title': 'Human',
+})
+pprint.pprint(entry)
+```
+
+
+<details><summary>Output</summary>
+<p>
+
+```python
+{
+    'algo-nickname': 'Human',
+    'algo-title': 'Human',
+    'env-title': 'atari-pong',
+    'env-variant': 'No-op start',
+    'score': 14.6,
+    'source-arxiv-id': '1511.06581',
+    'source-arxiv-version': 3,
+    'source-authors': [   'Ziyu Wang',
+                          'Tom Schaul',
+                          'Matteo Hessel',
+                          'Hado van Hasselt',
+                          'Marc Lanctot',
+                          'Nando de Freitas'],
+    'source-bibtex': '@article{DBLP:journals/corr/WangFL15,\n'
+                     '    author    = {Ziyu Wang and\n'
+                     '                 Nando de Freitas and\n'
+                     '                 Marc Lanctot},\n'
+                     '    title     = {Dueling Network Architectures for Deep '
+                     'Reinforcement Learning},\n'
+                     '    journal   = {CoRR},\n'
+                     '    volume    = {abs/1511.06581},\n'
+                     '    year      = {2015},\n'
+                     '    url       = {http://arxiv.org/abs/1511.06581},\n'
+                     '    archivePrefix = {arXiv},\n'
+                     '    eprint    = {1511.06581},\n'
+                     '    timestamp = {Mon, 13 Aug 2018 16:48:17 +0200},\n'
+                     '    biburl    = '
+                     '{https://dblp.org/rec/bib/journals/corr/WangFL15},\n'
+                     '    bibsource = {dblp computer science bibliography, '
+                     'https://dblp.org}\n'
+                     '}',
+    'source-nickname': 'DuDQN',
+    'source-title': 'Dueling Network Architectures for Deep Reinforcement '
+                    'Learning'
+}
+```
+
+</p>
+</details>
 
 ## Entry Structure
 
