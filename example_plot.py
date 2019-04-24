@@ -182,7 +182,7 @@ def main():
     )
     env_barplot(
         filter={'env-title': 'mujoco-walker2d'},
-        plot_title='Atari Space Invaders Scores',
+        plot_title='MuJoCo Walker2D Scores',
         plot_name='mujoco-walker2d',
     )
 
