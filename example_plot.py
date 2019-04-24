@@ -113,7 +113,7 @@ def env_barplot(filter, plot_title, plot_name):
     labels, scores, colors = entries_to_labels_scores(sorted_entries)
 
     # Draw bar plot
-    fig, ax = plt.subplots(figsize=(12, 12))
+    fig, ax = plt.subplots(figsize=(12, int(len(sorted_entries)/2)))
     bars = ax.barh(labels, scores, color=colors)
     plt.yticks(range(len(scores)), [''] * len(scores))
 
