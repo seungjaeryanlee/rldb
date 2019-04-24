@@ -142,19 +142,15 @@ def env_barplot(filter, plot_title, plot_name):
 def entries_to_labels_scores(entries):
     """
     Convert entries to labels and scores for barplot.
+
+    NOTE The labels only exist to discern entries: the actual labels are
+    set in set_label_legends.
     """
     nicknames = [entry['algo-nickname'] for entry in entries]
 
-    labels = []
     scores = []
     colors = []
     for entry in entries:
-        label = entry['algo-nickname']
-
-        # Add source info if needed
-        if nicknames.count(entry['algo-nickname']) > 1:
-            label += ' (From {})'.format(entry['source-nickname'])
-
         # Special color for 'Human' and 'Random'
         if entry['algo-title'] == 'Human':
             color = 'red'
@@ -162,13 +158,11 @@ def entries_to_labels_scores(entries):
             color = 'black'
         else:
             color = 'darkblue'
-
-        labels.append(label)
         scores.append(entry['score'])
 
         colors.append(color)
 
-    return labels, scores, colors
+    return list(range(len(scores))), scores, colors
 
 
 def main():
