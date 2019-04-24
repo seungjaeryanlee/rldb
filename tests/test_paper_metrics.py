@@ -134,7 +134,6 @@ def test_impala_paper_count():
         + 57  # Atari-57 IMPALA (deep)
         + 57  # Atari-57 IMPALA (deep, multitask)
         + 57  # Atari-57 IMPALA (shallow)
-        + 57  # Atari-57 Reactor
         + 30  # DMLab-30 Experts
         + 30  # DMLab-30 Human
         + 30  # DMLab-30 IMPALA

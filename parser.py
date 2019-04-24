@@ -120,7 +120,7 @@ def generate_entries(envs: list, scores: list, env_variant: str = ''):
 
 if __name__ == '__main__':
     # Prefer using backward-indices (-1, -2) since environment names can contain spaces
-    scores = parse_scores(lambda line: line.split(' ')[-1])
+    scores = parse_scores(lambda line: line.split(' ')[-3])
 
     # env_variant should be '', 'Human start' or 'No-op start'
-    generate_entries(dmlab30_envs, scores, env_variant='No-op start')
+    generate_entries(atari57_envs, scores, env_variant='No-op start')

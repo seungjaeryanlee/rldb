@@ -11,6 +11,7 @@ from .paper__noisynet import entries as noisynet_entries
 from .paper__prioritized_dqn import entries as per_entries
 from .paper__qr_dqn import entries as qr_dqn_entries
 from .paper__rainbow import entries as rainbow_entries
+from .paper__reactor import entries as reactor_entries
 from .paper__gorila_dqn import entries as gorila_dqn_entries
 from .paper__impala import entries as impala_entries
 from .paper__iqn import entries as iqn_entries
@@ -37,6 +38,7 @@ entries = (
     + per_entries
     + qr_dqn_entries
     + rainbow_entries
+    + reactor_entries
     + gorila_dqn_entries
     + impala_entries
     + iqn_entries

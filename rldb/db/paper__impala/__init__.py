@@ -2,7 +2,6 @@ from .algo__dmlab_30_human import entries as dmlab_30_human_entries
 from .algo__dmlab_30_random import entries as dmlab_30_random_entries
 from .algo__dmlab_30_experts import entries as dmlab_30_experts_entries
 from .algo__dmlab_30_impala import entries as dmlab_30_impala_entries
-from .algo__atari_reactor import entries as atari_reactor_entries
 from .algo__atari_impala_deep_multitask import entries as atari_impala_deep_multitask_entries
 from .algo__atari_impala_shallow import entries as atari_impala_shallow_entries
 from .algo__atari_impala_deep import entries as atari_impala_deep_entries
@@ -68,7 +67,6 @@ entries = (
     + dmlab_30_random_entries
     + dmlab_30_experts_entries
     + dmlab_30_impala_entries
-    + atari_reactor_entries
     + atari_impala_deep_multitask_entries
     + atari_impala_shallow_entries
     + atari_impala_deep_entries

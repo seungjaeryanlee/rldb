@@ -1,5 +1,5 @@
 """
-Reactor scores from IMPALA paper.
+Reactor scores from Reactor paper.
 
    57 entries
 ------------------------------------------------------------------------
