@@ -5,7 +5,8 @@
 [![Build Status](https://travis-ci.com/seungjaeryanlee/rldb.svg?branch=master)](https://travis-ci.com/seungjaeryanlee/rldb)
 
 ![Environments tracked in rldb](https://img.shields.io/badge/environments-114-blue.svg)
-![Papers tracked in rldb](https://img.shields.io/badge/papers-24-blue.svg)
+![Papers tracked in rldb](https://img.shields.io/badge/papers-22-blue.svg)
+![Repos tracked in rldb](https://img.shields.io/badge/repos-2-blue.svg)
 ![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-59-blue.svg)
 ![Entries tracked in rldb](https://img.shields.io/badge/entries-3266-blue.svg)
 
@@ -201,9 +202,9 @@ For example, the **Space Invaders** score of **Asynchronous Advantage Actor Crit
 
 Note that, as shown here, the entry can contain additional information.
 
-## Papers
+## Sources
 
-### Completed
+### Papers
 
 #### Deep Q-Networks
 
@@ -238,7 +239,7 @@ Note that, as shown here, the entry can contain additional information.
 
 - [x] [Trust-PCL: An Off-Policy Trust Region Method for Continuous Control (Nachum et al., 2017)](https://arxiv.org/abs/1707.01891)
 
-## Sources
+### Repositories
 
 - [x] [OpenAI Baselines](https://github.com/openai/baselines)
 - [x] [RL Baselines Zoo](https://github.com/araffin/rl-baselines-zoo)

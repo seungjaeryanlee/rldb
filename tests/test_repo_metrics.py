@@ -1,8 +1,8 @@
-"""Test metrics for each source."""
+"""Test metrics for each repository source."""
 import rldb
 
 
-def test_openai_baselines_cbd21ef_count():
+def test_repo_openai_baselines_cbd21ef_count():
     """Verify number of entries in OpenAI Baselines."""
     baselines_cbd21ef_entries = rldb.find_all({
         'source-title': 'OpenAI Baselines cbd21ef',
@@ -20,7 +20,7 @@ def test_openai_baselines_cbd21ef_count():
     )
 
 
-def test_openai_baselines_ea68f3b_count():
+def test_repo_openai_baselines_ea68f3b_count():
     """Verify number of entries in OpenAI Baselines."""
     baselines_ea68f3b_entries = rldb.find_all({
         'source-title': 'OpenAI Baselines ea68f3b',
@@ -33,7 +33,7 @@ def test_openai_baselines_ea68f3b_count():
     )
 
 
-def test_rl_baselines_zoo_count():
+def test_repo_rl_baselines_zoo_count():
     """Verify number of entries in RL Baselines Zoo."""
     rl_baselines_zoo_entries = rldb.find_all({
         'source-title': 'RL Baselines Zoo b76641e',

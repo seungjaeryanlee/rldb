@@ -28,9 +28,10 @@ def test_readme_source_count():
     with open('README.md', 'r') as f:
         lines = f.readlines()
         text = '\n'.join(lines)
-        nb_sources = re.search('papers-(.*)-blue.svg', text).group(1)
+        nb_papers = re.search('papers-(.*)-blue.svg', text).group(1)
+        nb_repos = re.search('repos-(.*)-blue.svg', text).group(1)
 
-    assert int(nb_sources) == len(all_sources)
+    assert int(nb_papers) + int(nb_repos) == len(all_sources)
 
 
 def test_readme_algo_count():
