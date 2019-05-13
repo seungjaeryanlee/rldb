@@ -19,6 +19,12 @@ algo = {
 }
 
 # Populate entries
+# From Figure 3 caption: "1 timestep equals 4 frames"
 entries = [{**entry, **algo} for entry in entries]
+for entry in entries:
+    if "atari" in entry["env-title"]:
+        entry["algo-frames"] = 4 * 50 * 1000 * 1000
+    elif "mujoco" in entry["env-title"]:
+        entry["algo-frames"] = 4 * 10 * 1000 * 1000
 
 assert len(entries) == 14
