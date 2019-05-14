@@ -14,10 +14,12 @@ def get_human_normalized_score(entry):
     human_entries = find_all({
         'env-title': entry['env-title'],
         'algo-title': 'Human',
+        'env-variant': entry['env-variant'],
     })
     random_entries = find_all({
         'env-title': entry['env-title'],
         'algo-title': 'Random',
+        'env-variant': entry['env-variant'],
     })
 
     # Use the higher scores if multiple scores exist
@@ -31,7 +33,7 @@ def get_human_normalized_score(entry):
     return (entry['score'] - random_entries[0]['score']) / (human_entries[0]['score'] - random_entries[0]['score'])
 
 
-def get_atari_median_human_normalized_score(algo_title):
+def get_atari_median_human_normalized_score(algo_title, env_variant):
     """
     Return median of human-normalized score of the algorithm for atari environments.
 
@@ -39,7 +41,7 @@ def get_atari_median_human_normalized_score(algo_title):
     https://arxiv.org/abs/1710.02298
     """
     normalized_scores = []
-    algo_entries = find_all({ 'algo-title': algo_title })
+    algo_entries = find_all({ 'algo-title': algo_title, 'env-variant': env_variant })
     for algo_entry in algo_entries:
         if algo_entry['env-title'][:5] == 'atari':
             score = get_human_normalized_score(algo_entry)
