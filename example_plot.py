@@ -101,7 +101,7 @@ def set_label_legends(fig, ax, bars, BBOX_TO_BAR_UNIT):
     )
 
 
-def env_barplot(filter, plot_title, plot_name):
+def env_barplot(filter, plot_title, filepath):
     entries = rldb.find_all(filter)
 
     # Dedupe and sort entries by score, increasing
@@ -134,7 +134,7 @@ def env_barplot(filter, plot_title, plot_name):
 
 
     plt.tight_layout()
-    plt.savefig('docs/{}.png'.format(plot_name))
+    plt.savefig(filepath)
     # plt.show()
     plt.clf()
 
@@ -172,12 +172,12 @@ def main():
             'env-variant': 'No-op start',
         },
         plot_title='Atari Space Invaders Scores (No-op start)',
-        plot_name='atari-space-invaders',
+        filepath='docs/atari-space-invaders.png',
     )
     env_barplot(
         filter={'env-title': 'mujoco-walker2d'},
         plot_title='MuJoCo Walker2D Scores',
-        plot_name='mujoco-walker2d',
+        filepath='docs/mujoco-walker2d.png',
     )
 
 
