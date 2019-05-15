@@ -12,6 +12,18 @@ source = {
         "Peter Stone",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "https://arxiv.org/abs/1507.06527",
+        },
+        {
+            "type": "PDF",
+            "url": "https://arxiv.org/pdf/1507.06527.pdf",
+        },
+    ],
+
     #  ARXIV
     "source-arxiv-id": "1507.06527",
     "source-arxiv-version": 4,

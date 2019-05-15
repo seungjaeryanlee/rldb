@@ -27,6 +27,18 @@ source = {
         "Koray Kavukcuoglu",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "https://arxiv.org/abs/1802.01561",
+        },
+        {
+            "type": "PDF",
+            "url": "https://arxiv.org/pdf/1802.01561.pdf",
+        },
+    ],
+
     #  ARXIV
     "source-arxiv-id": "1802.01561",
     "source-arxiv-version": 3,

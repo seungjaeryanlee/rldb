@@ -16,6 +16,18 @@ source = {
         "Jimmy Ba",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "https://arxiv.org/abs/1708.05144",
+        },
+        {
+            "type": "PDF",
+            "url": "https://arxiv.org/pdf/1708.05144.pdf",
+        },
+    ],
+
     #  ARXIV
     "source-arxiv-id": "1708.05144",
     "source-arxiv-version": 2,

@@ -15,6 +15,18 @@ source = {
         "Oleg Klimov",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "https://arxiv.org/abs/1810.12894",
+        },
+        {
+            "type": "PDF",
+            "url": "https://arxiv.org/pdf/1810.12894.pdf",
+        },
+    ],
+
     #  ARXIV
     "source-arxiv-id": "1810.12894",
     "source-arxiv-version": 1,

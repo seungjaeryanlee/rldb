@@ -16,6 +16,18 @@ source = {
         "Pieter Abbeel",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "https://arxiv.org/abs/1502.05477",
+        },
+        {
+            "type": "PDF",
+            "url": "https://arxiv.org/pdf/1502.05477.pdf",
+        },
+    ],
+
     #  ARXIV
     "source-arxiv-id": "1502.05477",
     "source-arxiv-version": 5,

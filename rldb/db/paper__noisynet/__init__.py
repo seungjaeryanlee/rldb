@@ -26,6 +26,18 @@ source = {
         "Shane Legg",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "https://arxiv.org/abs/1706.10295",
+        },
+        {
+            "type": "PDF",
+            "url": "https://arxiv.org/pdf/1706.10295.pdf",
+        },
+    ],
+
     #  ARXIV
     "source-arxiv-id": "1706.10295",
     "source-arxiv-version": 2,

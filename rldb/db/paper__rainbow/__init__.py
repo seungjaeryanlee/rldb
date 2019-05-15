@@ -21,6 +21,18 @@ source = {
         "David Silver",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "https://arxiv.org/abs/1710.02298",
+        },
+        {
+            "type": "PDF",
+            "url": "https://arxiv.org/pdf/1710.02298.pdf",
+        },
+    ],
+
     #  ARXIV
     "source-arxiv-id": "1710.02298",
     "source-arxiv-version": 1,

@@ -37,14 +37,28 @@ def entries_to_table(entries):
     table += '| Result | Algorithm | Source |\n'
     table += '|--------|-----------|--------|\n'
     for entry in entries:
+        # Choose best link
+        for link in entry['source-links']:
+            if link['type'] == 'ArXiv': # Best link
+                source_link = link
+            elif link['type'] == 'PDF': # Second-best link
+                if source_link['type'] != 'ArXiv':
+                    source_link = link
+            elif link['type'] == 'GitHub':
+                if source_link['type'] not in ['ArXiv', 'PDF']:
+                    source_link = link
+            else:
+                if source_link['type'] not in ['ArXiv', 'PDF', 'GitHub']:
+                    source_link = link
+
         # Boldface if Human or Random
         if entry['algo-nickname'] in ['Human', 'Random']:
-            table += '| {} | **{}** | {} |\n'.format(
-                entry['score'], entry['algo-nickname'], entry['source-title'],
+            table += '| {} | **{}** | [{}]({}) |\n'.format(
+                entry['score'], entry['algo-nickname'], entry['source-title'], source_link['url'],
             )
         else:
-            table += '| {} | {} | {} |\n'.format(
-                entry['score'], entry['algo-nickname'], entry['source-title'],
+            table += '| {} | {} | [{}]({}) |\n'.format(
+                entry['score'], entry['algo-nickname'], entry['source-title'], source_link['url'],
             )
 
     return table

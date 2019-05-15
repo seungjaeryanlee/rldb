@@ -16,6 +16,14 @@ source = {
         "Antonin Raffin",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "GitHub",
+            "url": "https://github.com/araffin/rl-baselines-zoo",
+        },
+    ],
+
     #  MISC.
     "source-bibtex": """\
 @misc{rlbaselines,

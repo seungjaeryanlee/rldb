@@ -19,6 +19,18 @@ source = {
         "Nando de Freitas",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "https://arxiv.org/abs/1511.06581",
+        },
+        {
+            "type": "PDF",
+            "url": "https://arxiv.org/pdf/1511.06581.pdf",
+        },
+    ],
+
     #  ARXIV
     "source-arxiv-id": "1511.06581",
     "source-arxiv-version": 3,

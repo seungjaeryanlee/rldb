@@ -18,6 +18,18 @@ source = {
         "David Meger",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "https://arxiv.org/abs/1802.09477",
+        },
+        {
+            "type": "PDF",
+            "url": "https://arxiv.org/pdf/1802.09477.pdf",
+        },
+    ],
+
     #  ARXIV
     "source-arxiv-id": "1802.09477",
     "source-arxiv-version": 2,

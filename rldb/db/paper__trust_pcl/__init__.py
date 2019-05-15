@@ -15,6 +15,18 @@ source = {
         "Dale Schuurmans",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "https://arxiv.org/abs/1707.01891",
+        },
+        {
+            "type": "PDF",
+            "url": "https://arxiv.org/pdf/1707.01891.pdf",
+        },
+    ],
+
     #  ARXIV
     "source-arxiv-id": "1707.01891",
     "source-arxiv-version": 3,

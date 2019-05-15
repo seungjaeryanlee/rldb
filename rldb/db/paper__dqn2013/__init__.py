@@ -23,6 +23,18 @@ source = {
         "Martin Riedmiller",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "https://arxiv.org/abs/1312.5602",
+        },
+        {
+            "type": "PDF",
+            "url": "https://arxiv.org/pdf/1312.5602.pdf",
+        },
+    ],
+
     #  ARXIV
     "source-arxiv-id": "1312.5602",
     "source-arxiv-version": 1,

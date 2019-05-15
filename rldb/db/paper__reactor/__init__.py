@@ -17,6 +17,18 @@ source = {
         "Remi Munos",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "https://arxiv.org/abs/1704.04651",
+        },
+        {
+            "type": "PDF",
+            "url": "https://arxiv.org/pdf/1704.04651.pdf",
+        },
+    ],
+
     #  ARXIV
     "source-arxiv-id": "1704.04651",
     "source-arxiv-version": 2,

@@ -25,6 +25,14 @@ source = {
         "Peter Zhokhov",
     ],
 
+    #  LINKS
+    "source-links": [
+        {
+            "type": "GitHub",
+            "url": "https://github.com/openai/baselines",
+        },
+    ],
+
     #  MISC.
     "source-bibtex": """\
 @misc{baselines,

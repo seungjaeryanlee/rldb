@@ -33,6 +33,14 @@ source = {
         "Shane Legg",
         "Demis Hassabis",
     ],
+
+    #  LINKS
+    "source-links": [
+        {
+            "type": "PDF",
+            "url": "https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf",
+        },
+    ],
 }
 
 # Populate entries
