@@ -43,10 +43,80 @@ def _generate_md_atari_single_env(filepath, env_title):
     result = populate_template(template, feed_dict)
     save_file('markdown/docs/{}'.format(filepath), result)
 
-def _generate_md_atari_main(atari_envs):
+def _generate_md_atari_main(filepath, atari_envs):
     """Generate a markdown file summarizing Atari environments."""
-    # TODO Implement Human normalized score in rldb
-    pass
+    # Get template
+    template = get_template('markdown/source/{}'.format(filepath))
+
+    ## NOOP
+    noop_envs_table = ''
+    noop_envs_table += '| Environment | Result | Algorithm | Source |\n'
+    noop_envs_table += '|-------------|--------|-----------|--------|\n'
+
+    for env_title in atari_envs:
+        entries = rldb.find_all({
+            'env-title': env_title,
+            'env-variant': 'No-op start',
+        })
+        entries.sort(key=lambda entry: entry['score'], reverse=True)
+        entry = entries[0] # Best Performing algorithm
+        source_link = get_best_source_link(entry) # Choose best link
+        if entry['algo-nickname'] == 'Human':
+            noop_envs_table += '| [{}](/envs/gym/atari/{}) | {} | **{}** | [{}]({}) |\n'.format(
+                entry['env-title'][6:],
+                entry['env-title'][6:],
+                entry['score'],
+                entry['algo-nickname'],
+                entry['source-title'],
+                source_link['url'],
+            )
+        else:
+            noop_envs_table += '| [{}](/envs/gym/atari/{}) | {} | {} | [{}]({}) |\n'.format(
+                entry['env-title'][6:],
+                entry['env-title'][6:],
+                entry['score'],
+                entry['algo-nickname'],
+                entry['source-title'],
+                source_link['url'],
+            )
+
+    ## HUMAN
+    human_envs_table = ''
+    human_envs_table += '| Environment | Result | Algorithm | Source |\n'
+    human_envs_table += '|-------------|--------|-----------|--------|\n'
+
+    for env_title in atari_envs:
+        entries = rldb.find_all({
+            'env-title': env_title,
+            'env-variant': 'Human start',
+        })
+        entries.sort(key=lambda entry: entry['score'], reverse=True)
+        entry = entries[0] # Best Performing algorithm
+        source_link = get_best_source_link(entry) # Choose best link
+        if entry['algo-nickname'] == 'Human':
+            human_envs_table += '| [{}](/envs/gym/atari/{}) | {} | **{}** | [{}]({}) |\n'.format(
+                entry['env-title'][6:],
+                entry['env-title'][6:],
+                entry['score'],
+                entry['algo-nickname'],
+                entry['source-title'],
+                source_link['url'],
+            )
+        else:
+            human_envs_table += '| [{}](/envs/gym/atari/{}) | {} | {} | [{}]({}) |\n'.format(
+                entry['env-title'][6:],
+                entry['env-title'][6:],
+                entry['score'],
+                entry['algo-nickname'],
+                entry['source-title'],
+                source_link['url'],
+            )
+
+    result = populate_template(template, {
+        "noop_envs_table": noop_envs_table,
+        "human_envs_table": human_envs_table,
+    })
+    save_file('markdown/docs/{}'.format(filepath), result)
 
 def _generate_md_atari_batch(atari_envs):
     """Generate all markdown files for Atari environments."""
@@ -61,7 +131,8 @@ def generate_md_atari():
     entries = rldb.find_all({})
     envs = set([entry['env-title'] for entry in entries])
     atari_envs = [env for env in envs if 'atari-' in env]
-    _generate_md_atari_main(atari_envs)
+    atari_envs.sort()
+    _generate_md_atari_main('envs/gym/atari/atari.md', atari_envs)
     _generate_md_atari_batch(atari_envs)
 
 if __name__ == "__main__":
