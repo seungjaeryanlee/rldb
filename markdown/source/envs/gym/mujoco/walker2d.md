@@ -1,0 +1,34 @@
+---
+layout: page
+title: MuJoCo Walker2D Environment
+permalink: /envs/gym/mujoco/walker2d/
+
+redirect_from:
+ - /env/gym/mujoco/walker2d/
+
+nav:
+ - name: Overview
+   permalink: '#overview'
+ - name: Performances
+   permalink: '#performances'
+---
+
+
+## Overview
+
+<video style="max-width: 50%" autoplay loop mute controls>
+    <source src='{{ "assets/_pages/envs/gym/mujoco/Walker2d.mp4" | absolute_url }}' >
+</video>
+
+Make a two-dimensional bipedal robot walk forward as fast as possible.
+
+## Performances of RL Agents {#performances}
+
+We list various reinforcement learning algorithms that were tested in this environment. These results are from [RL Database](https://github.com/seungjaeryanlee/rldb). If this page was helpful, please consider giving a star!
+
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/seungjaeryanlee/rldb" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star seungjaeryanlee/rldb on GitHub">Star</a>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+$table
