@@ -3,3 +3,6 @@ from .normalization import get_human_normalized_score, get_atari_median_human_no
 
 
 __all__ = ["find_one", "find_all"]
+
+
+name = "rldb"  # For PyPI

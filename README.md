@@ -3,6 +3,7 @@
 # rldb
 
 [![Build Status](https://travis-ci.com/seungjaeryanlee/rldb.svg?branch=master)](https://travis-ci.com/seungjaeryanlee/rldb)
+[![PyPI version](https://badge.fury.io/py/rldb.svg)](https://pypi.org/project/rldb/)
 
 ![Environments tracked in rldb](https://img.shields.io/badge/environments-114-blue.svg)
 ![Papers tracked in rldb](https://img.shields.io/badge/papers-22-blue.svg)
