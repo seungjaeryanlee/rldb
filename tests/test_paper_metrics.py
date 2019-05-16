@@ -16,6 +16,18 @@ def test_a3c_paper_count():
     )
 
 
+def test_a3c_paper_count():
+    """Verify number of entries in Ape-X DQN paper."""
+    ape_x_dqn_entries = rldb.find_all({
+        'source-title': 'Distributed Prioritized Experience Replay',
+    })
+
+    assert len(ape_x_dqn_entries) == (
+        0
+        + 114
+    )
+
+
 def test_c51_paper_count():
     """Verify number of entries in C51 paper."""
     c51_entries = rldb.find_all({

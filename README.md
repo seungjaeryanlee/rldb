@@ -6,10 +6,10 @@
 [![PyPI version](https://badge.fury.io/py/rldb.svg)](https://pypi.org/project/rldb/)
 
 ![Environments tracked in rldb](https://img.shields.io/badge/environments-114-blue.svg)
-![Papers tracked in rldb](https://img.shields.io/badge/papers-22-blue.svg)
+![Papers tracked in rldb](https://img.shields.io/badge/papers-23-blue.svg)
 ![Repos tracked in rldb](https://img.shields.io/badge/repos-2-blue.svg)
-![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-59-blue.svg)
-![Entries tracked in rldb](https://img.shields.io/badge/entries-3266-blue.svg)
+![Algorithms tracked in rldb](https://img.shields.io/badge/algorithms-60-blue.svg)
+![Entries tracked in rldb](https://img.shields.io/badge/entries-3380-blue.svg)
 
 Database of RL algorithms
 
@@ -221,6 +221,8 @@ Note that, as shown here, the entry can contain additional information.
 - [x] [Rainbow: Combining Improvements in Deep Reinforcement Learning (Hessel et al., 2017)](https://arxiv.org/abs/1710.02298)
 - [x] [Distributional Reinforcement Learning with Quantile Regression (Dabney et al., 2017)](https://arxiv.org/abs/1710.10044)
 - [x] [Implicit Quantile Networks for Distributional Reinforcement Learning (Dabney et al., 2018)](https://arxiv.org/abs/1806.06923)
+- [x] [Distributed Prioritized Experience Replay (Horgan et al., 2018)](https://arxiv.org/abs/1803.00933)
+
 
 #### Policy Gradients
 
