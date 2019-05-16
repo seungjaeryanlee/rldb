@@ -1,6 +1,7 @@
 # Parser input and output
 input.txt
 output.txt
+meta_output.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

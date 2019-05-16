@@ -1,0 +1,27 @@
+# Specify SOURCE
+source = {
+    #  BASICS
+    "source-title": "$title",
+    "source-nickname": "$nickname",
+    "source-authors": $authors_str
+
+    #  LINKS
+    "source-links": [
+        {
+            "type": "ArXiv",
+            "url": "$arxiv_link",
+        },
+        {
+            "type": "PDF",
+            "url": "$pdf_link",
+        },
+    ],
+
+    #  ARXIV
+    "source-arxiv-id": "$arxiv_tag",
+    "source-arxiv-version": $version,
+
+    #  MISC.
+    "source-bibtex": """\
+$bibliography""",
+}
