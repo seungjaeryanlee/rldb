@@ -9,6 +9,7 @@ class PDFParser_1312_5602(PDFParser):
         df = tables[0].df
         df = df.T
         df = self._remove_index_and_header(df)
+        df = self._remove_commas(df)
 
         report = tables[0].parsing_report
 

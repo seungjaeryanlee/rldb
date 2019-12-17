@@ -12,5 +12,10 @@ class PDFParser:
 
         return df
 
+    def _remove_commas(self, df):
+        df = df.replace(',','', regex=True)
+
+        return df
+
     def _preprocess(self):
         raise NotImplementedError("You can only initialize children of PDFParser that defines _preprocess().")
