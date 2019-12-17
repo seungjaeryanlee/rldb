@@ -17,5 +17,16 @@ class PDFParser:
 
         return df
 
+    def _standardize_env_names(self, df):
+        df.index = df.index.str.lower()
+        df.index = df.index.str.replace('[^A-Za-z\d ]+', '')
+
+        df = df.rename(index={
+            "b rider": "beam rider",
+            "s invaders": "space invaders",
+        })
+        
+        return df
+
     def _preprocess(self):
         raise NotImplementedError("You can only initialize children of PDFParser that defines _preprocess().")
