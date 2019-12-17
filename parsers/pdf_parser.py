@@ -25,8 +25,14 @@ class PDFParser:
             "b rider": "beam rider",
             "s invaders": "space invaders",
         })
-        
+
         return df
 
     def _preprocess(self):
         raise NotImplementedError("You can only initialize children of PDFParser that defines _preprocess().")
+
+    def as_dict(self):
+        return {
+            "df": self.df.to_dict(),
+            "report": self.report,
+        }

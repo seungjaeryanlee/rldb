@@ -21,3 +21,4 @@ if __name__ == "__main__":
     parser = PDFParser_1312_5602()
     print(parser.df)
     print(parser.report)
+    print(parser.as_dict())
