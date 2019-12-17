@@ -8,6 +8,7 @@ class PDFParser_1911_08265(PDFParser):
         tables = camelot.read_pdf("../pdfs/1911.08265.pdf", pages="17,18", flavor="stream")
         df = tables[0].df
         df = df.iloc[:-1].drop(columns=[7])
+        df = self._remove_index_and_header(df)
 
         report = tables[0].parsing_report
 

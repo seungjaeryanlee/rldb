@@ -8,6 +8,7 @@ class PDFParser_1312_5602(PDFParser):
         tables = camelot.read_pdf("../pdfs/1312.5602.pdf", pages="8", flavor="lattice")
         df = tables[0].df
         df = df.T
+        df = self._remove_index_and_header(df)
 
         report = tables[0].parsing_report
 
