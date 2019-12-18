@@ -31,6 +31,11 @@ class PDFParser:
 
         return df
 
+    def _unicode_to_ascii_minus_sign(self, df):
+        df = df.replace("−", "-", regex=True)
+
+        return df
+
     def _preprocess(self):
         raise NotImplementedError("You can only initialize children of PDFParser that defines _preprocess().")
 

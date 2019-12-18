@@ -10,6 +10,7 @@ class PDFParser_1312_5602(PDFParser):
         self.df = self._remove_index_and_header(self.df)
         self.df = self._remove_commas(self.df)
         self.df = self._standardize_env_names(self.df)
+        self.df = self._unicode_to_ascii_minus_sign(self.df)
 
         # Remove citation marks
         self.df.rename(index={
