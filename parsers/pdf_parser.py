@@ -18,10 +18,10 @@ class PDFParser:
         return df
 
     def _standardize_env_names(self, df):
-        df.index = df.index.str.lower()
-        df.index = df.index.str.replace('[^A-Za-z\d ]+', '')
+        df.columns = df.columns.str.lower()
+        df.columns = df.columns.str.replace('[^A-Za-z\d ]+', '')
 
-        df = df.rename(index={
+        df = df.rename(columns={
             "b rider": "beam rider",
             "s invaders": "space invaders",
         })

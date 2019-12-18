@@ -7,7 +7,6 @@ class PDFParser_1312_5602(PDFParser):
     def _preprocess(self):
         tables = camelot.read_pdf("../pdfs/1312.5602.pdf", pages="8", flavor="lattice")
         df = tables[0].df
-        df = df.T
         df = self._remove_index_and_header(df)
         df = self._remove_commas(df)
         df = self._standardize_env_names(df)
