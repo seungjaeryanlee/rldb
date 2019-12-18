@@ -1,3 +1,6 @@
+import textwrap
+
+
 class PDFParser:
     def __init__(self):
         self.df = None
@@ -36,3 +39,19 @@ class PDFParser:
             "df": self.df.to_dict(),
             "report": self.report,
         }
+
+    def _add_paper_metadata(self, title, authors, link, arxiv_id, arxiv_version, bibtex):
+        self.df["paper_title"] = title
+        self.df["paper_authors"] = authors
+        self.df["paper_link"] = link
+        self.df["paper_arxiv_id"] = arxiv_id
+        self.df["paper_arxiv_version"] = arxiv_version
+        self.df["paper_bibtex"] = textwrap.dedent(bibtex)
+
+    def _pre_add_agent_metadata(self):
+        self.df["agent_name"] = ""
+        self.df["agent_nickname"] = ""
+
+    def _add_agent_metadata(self, row_index, name, nickname):
+        self.df.loc[row_index, "agent_name"] = name
+        self.df.loc[row_index, "agent_nickname"] = nickname
