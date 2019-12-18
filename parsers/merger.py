@@ -18,4 +18,5 @@ if __name__ == "__main__":
     ]
 
     merged_df = merge(parsers)
+    merged_df.to_csv("merged_df.csv")
     print(merged_df)
