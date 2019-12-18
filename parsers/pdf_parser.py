@@ -1,3 +1,4 @@
+import numpy as np
 import textwrap
 
 
@@ -7,6 +8,12 @@ class PDFParser:
         self.report = None
 
         self._preprocess()
+
+    def _to_float_type(self, df):
+        return df.astype(float)
+
+    def _hyphen_to_nan(self, df):
+        return df.replace("-", np.nan)
 
     def _remove_index_and_header(self, df):
         df = df.set_index(0)

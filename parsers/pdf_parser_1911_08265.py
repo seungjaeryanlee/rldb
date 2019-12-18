@@ -14,6 +14,8 @@ class PDFParser_1911_08265(PDFParser):
         self.df = self._remove_commas(self.df)
         self.df = self._standardize_env_names(self.df)
         self.df = self._unicode_to_ascii_minus_sign(self.df)
+        self.df = self._hyphen_to_nan(self.df)
+        self.df = self._to_float_type(self.df)
 
         # Remove citation marks
         self.df.rename(index={
