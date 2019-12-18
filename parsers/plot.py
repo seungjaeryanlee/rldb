@@ -1,8 +1,9 @@
 import pandas as pd
 import plotly.graph_objects as go
+import chart_studio.plotly as py
 
 
-def plot_single_env(df, env_name):
+def plot_single_env(df, env_name, online):
     df = df.dropna(subset=[env_name])
     df = df.sort_values(by=[env_name], ascending=True)
     fig = go.Figure([go.Bar(
@@ -21,8 +22,9 @@ def plot_single_env(df, env_name):
         ),
     )
     fig.show()
+    py.plot(fig, filename=env_name, auto_open=True)
 
 
 if __name__ == "__main__":
     df = pd.read_csv("merged_df.csv")
-    plot_single_env(df, "skiing")
+    plot_single_env(df, "skiing", online=True)
