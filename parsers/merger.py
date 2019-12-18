@@ -6,7 +6,7 @@ from pdf_parser_1911_08265 import PDFParser_1911_08265
 
 def merge(parsers):
     dfs = [parser.df for parser in parsers]
-    merged_df = pd.concat(dfs)
+    merged_df = pd.concat(dfs, sort=True)
 
     return merged_df
 
