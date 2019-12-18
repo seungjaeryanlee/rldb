@@ -39,12 +39,12 @@ class PDFParser_1911_08265(PDFParser):
             }""",
         )
         self._pre_add_agent_metadata()
-        self._add_agent_metadata("Random", name="Random", nickname="Random")
-        self._add_agent_metadata("Human", name="Human", nickname="Human")
-        self._add_agent_metadata("SimPLe", name="Simulated Policy Learning", nickname="SimPLe")
-        self._add_agent_metadata("Ape-X", name="Ape-X", nickname="Ape-X")
-        self._add_agent_metadata("R2D2", name="Recurrent Replay Distributed Deep Q-Network", nickname="R2D2")
-        self._add_agent_metadata("MuZero", name="MuZero", nickname="MuZero")
+        self._add_agent_metadata("Random", fullname="Random", nickname="Random")
+        self._add_agent_metadata("Human", fullname="Human", nickname="Human")
+        self._add_agent_metadata("SimPLe", fullname="Simulated Policy Learning", nickname="SimPLe")
+        self._add_agent_metadata("Ape-X", fullname="Ape-X", nickname="Ape-X")
+        self._add_agent_metadata("R2D2", fullname="Recurrent Replay Distributed Deep Q-Network", nickname="R2D2")
+        self._add_agent_metadata("MuZero", fullname="MuZero", nickname="MuZero")
 
 if __name__ == "__main__":
     parser = PDFParser_1911_08265()

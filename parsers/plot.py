@@ -10,7 +10,7 @@ def plot_single_env(df, env_name):
         y=df[env_name],
         text=df[env_name],
         textposition='auto',
-        hovertext="<b>Paper: </b>" + df["paper_title"] + "<br><b>Agent: </b>" + df["agent_name"],
+        hovertext="<b>Paper: </b>" + df["paper_title"] + "<br><b>Agent: </b>" + df["agent_fullname"],
     )])
     fig.update_layout(
         barmode='group',

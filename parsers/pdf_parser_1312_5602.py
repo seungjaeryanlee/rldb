@@ -48,11 +48,11 @@ class PDFParser_1312_5602(PDFParser):
             }""",
         )
         self._pre_add_agent_metadata()
-        self._add_agent_metadata("Random", name="Random", nickname="Random")
-        self._add_agent_metadata("Sarsa", name="Sarsa", nickname="Sarsa")
-        self._add_agent_metadata("Contingency", name="Contingency", nickname="Contingency")
-        self._add_agent_metadata("DQN", name="Deep Q-Network", nickname="DQN")
-        self._add_agent_metadata("Human", name="Human", nickname="Human")
+        self._add_agent_metadata("Random", fullname="Random", nickname="Random")
+        self._add_agent_metadata("Sarsa", fullname="Sarsa", nickname="Sarsa")
+        self._add_agent_metadata("Contingency", fullname="Contingency", nickname="Contingency")
+        self._add_agent_metadata("DQN", fullname="Deep Q-Network", nickname="DQN")
+        self._add_agent_metadata("Human", fullname="Human", nickname="Human")
 
 
 if __name__ == "__main__":

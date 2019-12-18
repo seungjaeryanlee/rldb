@@ -61,9 +61,9 @@ class PDFParser:
         self.df["paper_bibtex"] = textwrap.dedent(bibtex)
 
     def _pre_add_agent_metadata(self):
-        self.df["agent_name"] = ""
+        self.df["agent_fullname"] = ""
         self.df["agent_nickname"] = ""
 
-    def _add_agent_metadata(self, row_index, name, nickname):
-        self.df.loc[row_index, "agent_name"] = name
+    def _add_agent_metadata(self, row_index, fullname, nickname):
+        self.df.loc[row_index, "agent_fullname"] = fullname
         self.df.loc[row_index, "agent_nickname"] = nickname
