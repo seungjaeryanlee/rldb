@@ -15,6 +15,7 @@ class PDFParser_1911_08265(PDFParser):
         df_noop = self._standardize_env_names(df_noop)
         df_noop = self._standardize_scores(df_noop)
         df_noop = df_noop.add_suffix("_noop")
+        df_noop.columns = df_noop.columns.str.replace("shingderby", "fishingderby")
 
         # HUMAN
         df_human = tables[1].df
@@ -24,6 +25,7 @@ class PDFParser_1911_08265(PDFParser):
         df_human = self._standardize_env_names(df_human)
         df_human = self._standardize_scores(df_human)
         df_human = df_human.add_suffix("_human")
+        df_human.columns = df_human.columns.str.replace("shingderby", "fishingderby")
 
         self.df = pd.concat([df_noop, df_human], axis=1)
 
