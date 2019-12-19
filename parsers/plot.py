@@ -7,18 +7,18 @@ def plot_single_env(df, env_name, online):
     df = df.dropna(subset=[env_name])
     df = df.sort_values(by=[env_name], ascending=True)
     fig = go.Figure([go.Bar(
-        x=df["agent_nickname"] + df["paper_title"],
+        x=df["metadata_agent_nickname"] + df["metadata_paper_title"],
         y=df[env_name],
         text=df[env_name],
         textposition='auto',
-        hovertext="<b>Paper: </b>" + df["paper_title"] + "<br><b>Agent: </b>" + df["agent_fullname"],
+        hovertext="<b>Paper: </b>" + df["metadata_paper_title"] + "<br><b>Agent: </b>" + df["metadata_agent_fullname"],
     )])
     fig.update_layout(
         barmode='group',
         xaxis=dict(
             tickmode="array",
-            tickvals=df["agent_nickname"] + df["paper_title"],
-            ticktext=df["agent_nickname"],
+            tickvals=df["metadata_agent_nickname"] + df["metadata_paper_title"],
+            ticktext=df["metadata_agent_nickname"],
         ),
     )
     fig.show()

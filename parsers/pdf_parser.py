@@ -53,17 +53,17 @@ class PDFParser:
         }
 
     def _add_paper_metadata(self, title, authors, link, arxiv_id, arxiv_version, bibtex):
-        self.df["paper_title"] = title
-        self.df["paper_authors"] = authors
-        self.df["paper_link"] = link
-        self.df["paper_arxiv_id"] = arxiv_id
-        self.df["paper_arxiv_version"] = arxiv_version
-        self.df["paper_bibtex"] = textwrap.dedent(bibtex)
+        self.df["metadata_paper_title"] = title
+        self.df["metadata_paper_authors"] = authors
+        self.df["metadata_paper_link"] = link
+        self.df["metadata_paper_arxiv_id"] = arxiv_id
+        self.df["metadata_paper_arxiv_version"] = arxiv_version
+        self.df["metadata_paper_bibtex"] = textwrap.dedent(bibtex)
 
     def _pre_add_agent_metadata(self):
-        self.df["agent_fullname"] = ""
-        self.df["agent_nickname"] = ""
+        self.df["metadata_agent_fullname"] = ""
+        self.df["metadata_agent_nickname"] = ""
 
     def _add_agent_metadata(self, row_index, fullname, nickname):
-        self.df.loc[row_index, "agent_fullname"] = fullname
-        self.df.loc[row_index, "agent_nickname"] = nickname
+        self.df.loc[row_index, "metadata_agent_fullname"] = fullname
+        self.df.loc[row_index, "metadata_agent_nickname"] = nickname
