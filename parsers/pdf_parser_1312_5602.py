@@ -8,8 +8,8 @@ class PDFParser_1312_5602(PDFParser):
         tables = camelot.read_pdf("../pdfs/1312.5602.pdf", pages="8", flavor="lattice")
         self.df, self.report = tables[0].df, tables[0].parsing_report
         self.df = self._remove_index_and_header(self.df)
-        self.df = self._remove_commas(self.df)
         self.df = self._standardize_env_names(self.df)
+        self.df = self._remove_commas(self.df)
         self.df = self._unicode_to_ascii_minus_sign(self.df)
         self.df = self._hyphen_to_nan(self.df)
         self.df = self._to_float_type(self.df)
