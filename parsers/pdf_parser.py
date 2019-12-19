@@ -9,6 +9,9 @@ class PDFParser:
 
         self._format_df()
 
+    def _format_df(self):
+        raise NotImplementedError("You can only initialize children of PDFParser that defines _preprocess().")
+
     def _remove_index_and_header(self, df):
         df = df.set_index(0)
         del df.index.name
@@ -34,15 +37,6 @@ class PDFParser:
         df = df.astype(float) # Number format
 
         return df
-
-    def _format_df(self):
-        raise NotImplementedError("You can only initialize children of PDFParser that defines _preprocess().")
-
-    def as_dict(self):
-        return {
-            "df": self.df.to_dict(),
-            "report": self.report,
-        }
 
     def _add_paper_metadata(self, title, authors, link, arxiv_id, arxiv_version, bibtex):
         self.df["metadata_paper_title"] = title
