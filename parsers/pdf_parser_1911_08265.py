@@ -1,3 +1,4 @@
+import pandas as pd
 import camelot
 
 from pdf_parser import PDFParser
@@ -6,13 +7,25 @@ from pdf_parser import PDFParser
 class PDFParser_1911_08265(PDFParser):
     def _format_df(self):
         tables = camelot.read_pdf("../pdfs/1911.08265.pdf", pages="17,18", flavor="stream")
-        # TODO(seungjaeryanlee) Two tables!
-        self.df, self.report = tables[0].df, tables[0].parsing_report
-        self.df = self.df.iloc[:-1].drop(columns=[7])
-        self.df = self.df.T
-        self.df = self._remove_index_and_header(self.df)
-        self.df = self._standardize_env_names(self.df)
-        self.df = self._standardize_scores(self.df)
+        # NOOP
+        df_noop = tables[0].df
+        df_noop = df_noop.iloc[:-1].drop(columns=[7])
+        df_noop = df_noop.T
+        df_noop = self._remove_index_and_header(df_noop)
+        df_noop = self._standardize_env_names(df_noop)
+        df_noop = self._standardize_scores(df_noop)
+        df_noop = df_noop.add_suffix("_noop")
+
+        # HUMAN
+        df_human = tables[1].df
+        df_human = df_human.iloc[:-1].drop(columns=[5])
+        df_human = df_human.T
+        df_human = self._remove_index_and_header(df_human)
+        df_human = self._standardize_env_names(df_human)
+        df_human = self._standardize_scores(df_human)
+        df_human = df_noop.add_suffix("_human")
+
+        self.df = pd.concat([df_noop, df_human], axis=1)
 
         # Remove citation marks
         self.df.rename(index={
