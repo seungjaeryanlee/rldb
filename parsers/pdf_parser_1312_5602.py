@@ -6,10 +6,14 @@ from pdf_parser import PDFParser
 class PDFParser_1312_5602(PDFParser):
     def _format_df(self):
         tables = camelot.read_pdf("../pdfs/1312.5602.pdf", pages="8", flavor="lattice")
-        self.df = tables[0].df
-        self.df = self._remove_index_and_header(self.df)
-        self.df = self._standardize_env_names(self.df)
-        self.df = self._standardize_scores(self.df)
+        df_noop = tables[0].df
+        df_noop = self._remove_index_and_header(df_noop)
+        df_noop = self._standardize_env_names(df_noop)
+        df_noop = self._standardize_scores(df_noop)
+        # TODO(seungjaeryanlee): Assumed they used NOOP start... but there is no mention in the paper
+        df_noop = df_noop.add_suffix("_noop")
+
+        self.df = df_noop
 
         # Remove citation marks
         self.df.rename(index={
