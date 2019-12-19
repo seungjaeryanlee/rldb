@@ -27,4 +27,4 @@ def plot_single_env(df, env_name, online):
 
 if __name__ == "__main__":
     df = pd.read_csv("merged_df.csv")
-    plot_single_env(df, "skiing", online=True)
+    plot_single_env(df, "breakout_noop", online=True)
