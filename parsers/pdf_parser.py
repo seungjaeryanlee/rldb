@@ -9,21 +9,10 @@ class PDFParser:
 
         self._format_df()
 
-    def _to_float_type(self, df):
-        return df.astype(float)
-
-    def _hyphen_to_nan(self, df):
-        return df.replace("-", np.nan)
-
     def _remove_index_and_header(self, df):
         df = df.set_index(0)
         del df.index.name
         df = df.rename(columns=df.iloc[0]).drop(df.index[0])
-
-        return df
-
-    def _remove_commas(self, df):
-        df = df.replace(',','', regex=True)
 
         return df
 
@@ -38,8 +27,11 @@ class PDFParser:
 
         return df
 
-    def _unicode_to_ascii_minus_sign(self, df):
-        df = df.replace("−", "-", regex=True)
+    def _standardize_scores(self, df):
+        df = df.replace("−", "-", regex=True) # Fix unicode minus signs
+        df = df.replace("-", np.nan) # Use NaN for no score
+        df = df.replace(',','', regex=True) # Remove commas in numbers
+        df = df.astype(float) # Number format
 
         return df
 

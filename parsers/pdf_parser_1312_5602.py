@@ -9,10 +9,7 @@ class PDFParser_1312_5602(PDFParser):
         self.df, self.report = tables[0].df, tables[0].parsing_report
         self.df = self._remove_index_and_header(self.df)
         self.df = self._standardize_env_names(self.df)
-        self.df = self._remove_commas(self.df)
-        self.df = self._unicode_to_ascii_minus_sign(self.df)
-        self.df = self._hyphen_to_nan(self.df)
-        self.df = self._to_float_type(self.df)
+        self.df = self._standardize_scores(self.df)
 
         # Remove citation marks
         self.df.rename(index={
