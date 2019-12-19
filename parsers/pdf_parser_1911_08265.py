@@ -59,4 +59,3 @@ class PDFParser_1911_08265(PDFParser):
 if __name__ == "__main__":
     parser = PDFParser_1911_08265()
     print(parser.df)
-    print(parser.report)

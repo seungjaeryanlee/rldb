@@ -5,7 +5,6 @@ import textwrap
 class PDFParser:
     def __init__(self):
         self.df = None
-        self.report = None
 
         self._format_df()
 

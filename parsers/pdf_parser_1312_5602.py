@@ -6,7 +6,7 @@ from pdf_parser import PDFParser
 class PDFParser_1312_5602(PDFParser):
     def _format_df(self):
         tables = camelot.read_pdf("../pdfs/1312.5602.pdf", pages="8", flavor="lattice")
-        self.df, self.report = tables[0].df, tables[0].parsing_report
+        self.df = tables[0].df
         self.df = self._remove_index_and_header(self.df)
         self.df = self._standardize_env_names(self.df)
         self.df = self._standardize_scores(self.df)
@@ -55,4 +55,3 @@ class PDFParser_1312_5602(PDFParser):
 if __name__ == "__main__":
     parser = PDFParser_1312_5602()
     print(parser.df)
-    print(parser.report)
