@@ -25,6 +25,8 @@ class PDFParser:
         df = df.rename(columns={
             "brider": "beamrider",
             "sinvaders": "spaceinvaders",
+            "montezumarevenge": "montezumasrevenge",
+            "upanddown": "upndown",
         })
 
         return df
