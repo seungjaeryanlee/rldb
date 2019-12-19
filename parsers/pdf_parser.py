@@ -7,7 +7,7 @@ class PDFParser:
         self.df = None
         self.report = None
 
-        self._preprocess()
+        self._format_df()
 
     def _to_float_type(self, df):
         return df.astype(float)
@@ -43,7 +43,7 @@ class PDFParser:
 
         return df
 
-    def _preprocess(self):
+    def _format_df(self):
         raise NotImplementedError("You can only initialize children of PDFParser that defines _preprocess().")
 
     def as_dict(self):

@@ -4,7 +4,7 @@ from pdf_parser import PDFParser
 
 
 class PDFParser_1911_08265(PDFParser):
-    def _preprocess(self):
+    def _format_df(self):
         tables = camelot.read_pdf("../pdfs/1911.08265.pdf", pages="17,18", flavor="stream")
         # TODO(seungjaeryanlee) Two tables!
         self.df, self.report = tables[0].df, tables[0].parsing_report
