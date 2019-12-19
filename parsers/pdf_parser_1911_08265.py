@@ -23,7 +23,7 @@ class PDFParser_1911_08265(PDFParser):
         df_human = self._remove_index_and_header(df_human)
         df_human = self._standardize_env_names(df_human)
         df_human = self._standardize_scores(df_human)
-        df_human = df_noop.add_suffix("_human")
+        df_human = df_human.add_suffix("_human")
 
         self.df = pd.concat([df_noop, df_human], axis=1)
 
